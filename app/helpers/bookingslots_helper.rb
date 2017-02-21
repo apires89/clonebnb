@@ -1,0 +1,2 @@
+module BookingslotsHelper
+end
