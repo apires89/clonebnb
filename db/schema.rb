@@ -11,12 +11,26 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 20170221123952) do
-
+ActiveRecord::Schema.define(version: 20170221152138) do
 
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attachinary_files", force: :cascade do |t|
+    t.string   "attachinariable_type"
+    t.integer  "attachinariable_id"
+    t.string   "scope"
+    t.string   "public_id"
+    t.string   "version"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "format"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
+  end
 
   create_table "booking_slots", force: :cascade do |t|
     t.date     "date"
@@ -58,6 +72,8 @@ ActiveRecord::Schema.define(version: 20170221123952) do
     t.integer  "user_id"
     t.integer  "bathrooms"
     t.boolean  "activate"
+    t.string   "photo"
+    t.string   "url"
     t.index ["user_id"], name: "index_rooms_on_user_id", using: :btree
   end
 
@@ -74,7 +90,6 @@ ActiveRecord::Schema.define(version: 20170221123952) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-<<<<<<< HEAD
     t.string   "provider"
     t.string   "uid"
     t.string   "facebook_picture_url"
@@ -82,7 +97,6 @@ ActiveRecord::Schema.define(version: 20170221123952) do
     t.string   "last_name"
     t.string   "token"
     t.datetime "token_expiry"
-=======
     t.string   "phone_number"
     t.string   "fullname"
     t.text     "description"
