@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221115015) do
+ActiveRecord::Schema.define(version: 20170221144958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 20170221115015) do
     t.integer  "user_id"
     t.integer  "bathrooms"
     t.boolean  "activate"
+    t.string   "photo"
+    t.string   "url"
     t.index ["user_id"], name: "index_rooms_on_user_id", using: :btree
   end
 
