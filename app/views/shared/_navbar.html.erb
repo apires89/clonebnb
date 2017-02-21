@@ -1,32 +1,35 @@
 <div class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png" %>
-  <% end %>
+  <!-- Left Navigation -->
+  <div class="navbar-wagon-left">
+    <!-- Logo linking home -->
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+      <%= image_tag "logo.png" %>
+    <% end %>
+  </div>
+    <!-- Search form -->
+      <form action="/s/" class="navbar-wagon-search">
+        <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+        <button type="submit" class="navbar-wagon-search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+
+
+
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-    <!-- Search form -->
-    <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
+      <!-- Notifications -->
+        <a href="" class="navbar-wagon-item navbar-wagon-link">
+          <div class="badge-container">
+            <i class="fa fa-envelope-o"></i>
+            <div class="badge badge-blue">3</div>
+          </div>
+        </a>
 
-      <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-        <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
-        </div>
-      <% end %>
-
-      <!-- Profile picture and dropdown -->
+      <!-- Profile picture and dropdown for whatever we want -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
@@ -52,13 +55,14 @@
 
     <% else %>
 
+  <!-- Standard display of login and sign in links -->
+
+      <%= link_to t(".sign_up", default: "Sign In"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link text-center" %>
+
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link text-center" %>
 
     <% end %>
-
-    <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
@@ -66,9 +70,9 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+        <li><%= link_to t(".sign_up", default: "Sign In"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+
       </ul>
     </div>
   </div>
