@@ -27,11 +27,15 @@
     </script>
   </head>
   <body>
+  <div id="container">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div id="body">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag 'application' %>
     <%= cloudinary_js_config %>
-    <h1>Hello <strong>motherfucking</strong>  World</h1>
+    <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>
