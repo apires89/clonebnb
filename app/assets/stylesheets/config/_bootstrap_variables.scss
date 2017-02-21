@@ -2,7 +2,7 @@
  * Bootstrap sass variable
  * (see http://getbootstrap.com/customize/#less-variables)
  * ------------------------------------- */
-
+@import url('variables');
 // General style
 $font-family-sans-serif:  $base-font;
 $body-bg:                 white;
@@ -10,16 +10,30 @@ $font-size-base:          $base-size;
 $line-height-base:        $base-height;
 $headings-font-family:    $header-font;
 
+
 // Semantic color scheme
 // => http://getbootstrap.com/customize/#colors
-$gray-base:       $gray;
-$brand-primary:   $blue;
+
+// ones edited or created by gui
+$gray-base:       $gray; // bootstrap's main color
+$brand-primary:   $seagreen; // accentuation color, links, stars, buttons and notifications
+$soft-lines:      $lightgray;
+$text:            $black;
+
+// bootstrap's default
 $brand-success:   $green;
 $brand-info:      $yellow;
 $brand-danger:    $red;
 $brand-warning:   $orange;
 
-// Buttons / inputs radius
+
+// Buttons / inputs radius, also edited by gui but only used by bootstrap
 $border-radius-base:  2px;
-$border-radius-large: 2px;
-$border-radius-small: 2px;
+$border-radius-large: 3px;
+$border-radius-small: 1px;
+
+// ---> Guys, use these variable names on your views' css files. NOT THE ONES IN VARIABLES.SCSS
+// ---> These should still change when we start doing cards and stuff
+// ---> Check application.scss and variables.scss for more
+
+

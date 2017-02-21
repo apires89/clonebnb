@@ -1,0 +1,60 @@
+.form-inputs {
+  max-width: 400px;
+  margin: auto;
+}
+
+.form-actions {
+  margin-bottom: 10px;
+}
+
+.form-actions > .btn {
+  background-color: $brand-color;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: 400px;
+}
+
+.form-extra-actions {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.form-extra-actions li {
+  padding: 0px 30px;
+}
+
+.login-forms {
+  margin-top: 150px;
+  border: 1px solid $soft-lines;
+  max-width: 500px;
+  padding-bottom: 20px;
+}
+
+.login-btn {
+  width: 180px;
+}
+
+.signup-or-separator {
+  background: none;
+  height: 34px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-or-separator hr{
+  border-bottom: 1px solid $soft-lines;
+  margin: -20px auto 10px;
+  max-width: 400px;
+}
+
+.signup-or-separator--text {
+  background-color: #fff;
+  display: inline-block;
+  padding: 8px;
+}
+
+.login-btn-list {
+  margin-top: 20px;
+}
