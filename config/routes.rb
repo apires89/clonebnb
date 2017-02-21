@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'rooms/new'
+
+  get 'rooms/show'
+
+  get 'rooms/index'
+
+  get 'rooms/create'
+
+  get 'rooms/update'
+
+  get 'rooms/edit'
+
  resources :bookings
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
