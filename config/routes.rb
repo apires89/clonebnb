@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
- map.resources :bookings
+  get 'rooms/new'
+
+  get 'rooms/show'
+
+  get 'rooms/index'
+
+  get 'rooms/create'
+
+  get 'rooms/update'
+
+  get 'rooms/edit'
+
+ resources :bookings
 
   devise_for :users
   root to: 'pages#home'
