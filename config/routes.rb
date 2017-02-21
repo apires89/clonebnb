@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+mount Attachinary::Engine => "/attachinary"
   get 'rooms/new'
 
   get 'rooms/show'
