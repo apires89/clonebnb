@@ -10,10 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220172029) do
+
+ActiveRecord::Schema.define(version: 20170220182927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "booking_slots", force: :cascade do |t|
+    t.date     "date"
+    t.decimal  "day_price"
+    t.integer  "booking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "room_id"
+    t.index ["booking_id"], name: "index_booking_slots_on_booking_id", using: :btree
+    t.index ["room_id"], name: "index_booking_slots_on_room_id", using: :btree
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.decimal  "price"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "num_of_persons"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string   "home_type"
+    t.string   "room_type"
+    t.string   "address"
+    t.integer  "price"
+    t.integer  "bedrooms"
+    t.integer  "accomodate"
+    t.text     "summary"
+    t.boolean  "has_tv"
+    t.boolean  "has_kitchen"
+    t.boolean  "has_aircon"
+    t.boolean  "has_heating"
+    t.boolean  "has_wifi"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.integer  "bathrooms"
+    t.index ["user_id"], name: "index_rooms_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -31,5 +74,11 @@ ActiveRecord::Schema.define(version: 20170220172029) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
+
+
+  add_foreign_key "booking_slots", "bookings"
+  add_foreign_key "booking_slots", "rooms"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "rooms", "users"
 
 end
