@@ -40,6 +40,7 @@ before_action :set_room, only: [:show, :edit, :update]
       end
       redirect_to edit_room_path(@room), notice: "Room updated successfully."
   end
+end
   def edit
     if current_user.id == @room.user.id
       @photos = @room.photos
