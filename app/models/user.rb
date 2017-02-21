@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
-has_many:rooms
+  has_many :rooms, dependent: :destroy
+  has_many :bookings, dependent: :destroy
 
   # facebook stuff copy pasted from slides
   def self.find_for_facebook_oauth(auth)
