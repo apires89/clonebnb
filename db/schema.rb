@@ -98,6 +98,8 @@ ActiveRecord::Schema.define(version: 20170221152138) do
     t.string   "phone_number"
     t.string   "fullname"
     t.text     "description"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
   add_foreign_key "booking_slots", "bookings"
