@@ -1,5 +1,8 @@
 class RoomsController < ApplicationController
+<<<<<<< HEAD
    before_action :set_room, only: [:show, :edit, :update]
+=======
+>>>>>>> e20437a0164e48184732da60475325efdc116d42
   def new
   end
 
@@ -17,6 +20,7 @@ class RoomsController < ApplicationController
 
   def edit
   end
+<<<<<<< HEAD
 
   private
 
@@ -30,4 +34,6 @@ class RoomsController < ApplicationController
      :bedrooms, :bathrooms, :summary, :address, :has_tv,
      :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate )
   end
+=======
+>>>>>>> e20437a0164e48184732da60475325efdc116d42
 end
