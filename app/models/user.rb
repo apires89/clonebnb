@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
+  has_attachment  :avatar, accept: [:jpg, :png, :gif]
+
 
   has_many :rooms, dependent: :destroy
   has_many :bookings, dependent: :destroy
