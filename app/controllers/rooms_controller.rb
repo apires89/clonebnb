@@ -10,6 +10,8 @@ before_action :set_room, only: [:show, :edit, :update]
   end
 
   def show
+    @room = Room.find(params[:id])
+    @alert_message = "You are viewing #{@room.name}"
     @photos = @room.photos
     @reviews = @room.reviews
     @hasReview = @reviews.find_by(user_id: current_user.id) if current_user
@@ -17,6 +19,11 @@ before_action :set_room, only: [:show, :edit, :update]
 
   def index
     @rooms = current_user.rooms
+    @rooms = Room.where.not(latitude: nil, longitude: nil)
+    @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
+      marker.lat flat.latitude
+      marker.lng flat.longitude
+    end
   end
 
   def create
@@ -48,7 +55,7 @@ end
     if current_user.id == @room.user.id
       @photos = @room.photos
     else
-      redirect_to root_path, notice "You can't make changes to this room."
+      redirect_to root_path, notice: "You can't make changes to this room."
     end
   end
 
@@ -62,6 +69,6 @@ end
   params.require(:room).permit(
   :home_type, :room_type, :accomodate,
   :bedrooms, :bathrooms, :summary, :address, :has_tv,
-  :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, photos: [], :photo_cache, :url )
+  :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, :photo_cache, :url, photos: [] )
   end
 end
