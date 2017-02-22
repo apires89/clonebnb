@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_attachment  :avatar, accept: [:jpg, :png, :gif]
   has_attachments :photos, maximum: 10
 
-    validates :avatar, presence: true
+  #validates :avatar, presence: true
 
   has_many :rooms, dependent: :destroy
   has_many :bookings, dependent: :destroy
