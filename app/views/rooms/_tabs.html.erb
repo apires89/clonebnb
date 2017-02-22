@@ -1,0 +1,25 @@
+<div class="tabs">
+  <a class="tab active" data-target="#bio">
+    <h2>Overview</h2>
+  </a>
+  <a class="tab" data-target="#projects">
+    <h2>Projects</h2>
+  </a>
+  <a class="tab" data-target="#contact">
+    <h2>Contact</h2>
+  </a>
+  <a class="tab" data-target="#contact">
+    <h2>Contact</h2>
+  </a>
+</div>
+
+<script>
+  $(function(){
+    $(".tab").on("click", function(e){
+      // Change active tab
+      $(".tab").removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+</script>
+

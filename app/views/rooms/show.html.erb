@@ -1,2 +1,51 @@
-<h1>Rooms#show</h1>
-<p>Find me in app/views/rooms/show.html.erb</p>
+
+<div class="show-banner banner">
+
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="row hide-md text-center">
+        <%= render 'tabs'  %>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <%= render 'home-card' %>
+        </div>
+      </div>
+      <div class="col-lg-4">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<a href="logo.png" class="swipebox" title="My Caption">
+<img src="images/log.png" alt="image">
+</a>
+
+<script type="text/javascript">
+$(function(){
+
+$( '#gallery' ).click( function( e ) {
+  e.preventDefault();
+  $.swipebox( [
+    { href:'big/image1.jpg', title:'My Caption' },
+    { href:'big/image2.jpg', title:'My Second Caption' }
+  ] );
+} );
+});
+</script>
+<script src="lib/jquery-2.0.3.js"></script>
+<script src="src/js/jquery.swipebox.js"></script>
+

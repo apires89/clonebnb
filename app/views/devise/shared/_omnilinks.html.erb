@@ -1,13 +1,13 @@
-<%- if devise_mapping.omniauthable? %>
-  <ul class="login-btn-list list-inline">
-    <%- resource_class.omniauth_providers.each do |provider| %>
-      <li>
-        <%= link_to "", omniauth_authorize_path(resource_name, provider), :class => "fa fa-facebook btn btn-facebook login-btn" %>
-      </li>
-    <% end -%>
-  </ul>
-  <div class="signup-or-separator">
-    <span class="signup-or-separator--text">or</span>
-    <hr>
-  </div>
-<% end -%>
+<% if devise_mapping.omniauthable? %>
+    <ul class="login-btn-list list-inline">
+      <%- resource_class.omniauth_providers.each do |provider| %>
+        <li>
+          <%= link_to "", omniauth_authorize_path(resource_name, provider), :class => "fa fa-facebook btn btn-facebook login-btn" %>
+        </li>
+      <% end %>
+    </ul>
+    <div class="signup-or-separator">
+      <span class="signup-or-separator--text">or</span>
+      <hr>
+    </div>
+<% end %>
