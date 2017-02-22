@@ -1,2 +1,62 @@
-<h1>Rooms#show</h1>
-<p>Find me in app/views/rooms/show.html.erb</p>
+<% content_for(:title) do %>
+  <%= @room.title %> is on AIRBNB-CLONE
+<% end %>
+<% content_for(:description) do %>
+  <%= @room.description %> is one the best room
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @room.title %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @room.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @room.description %>
+</p>
+
+<p>
+  <strong>Stars:</strong>
+  <%= @room.stars %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @room.user_id %>
+</p>
+
+<!-- <p>
+  <strong>Latitude:</strong>
+  <%= @room.latitude %>
+</p>
+<p>
+  <strong>Longitude:</strong>
+  <%= @room.longitude %>
+</p> -->
+
+<ul>
+  <% @room.reviews.each do |review| %>
+  <li><%= review.content %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %> |
+<%= link_to 'info about owner', owner_room_path(@room) %>|
+<%= link_to 'Add review', new_room_review_path(@room) %>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      var coord = <%= raw @flat_coordinates.to_json %>;
+      alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
+    });
+  <% end %>
+<% end %>
