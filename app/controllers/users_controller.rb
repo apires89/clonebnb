@@ -1,19 +1,22 @@
 class UsersController < ApplicationController
-  def new
-  end
 
-  def create
+
+  def update
+    @user = User.find(params[:id])
+    if params[:user]
+      @user.update(user_params)
+    end
+      redirect_to user_path
   end
 
   def show
+    @user = User.find(params[:id])
+    @review = Review.new
   end
 
-  def edit
-  end
 
-  def update
-  end
-
-  def bookings
+private
+  def user_params
+    params.require(:user).permit(:avatar, :bio, :location)
   end
 end

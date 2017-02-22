@@ -3,6 +3,7 @@ before_action :set_room, only: [:show, :edit, :update]
 
 # User must be authneticated before every controller action, except for show
   before_action :authenticate_user!, except: [:show]
+  has_attachments :photos, maximum: 10
 
   def new
     @room = current_user.rooms.build
@@ -10,6 +11,8 @@ before_action :set_room, only: [:show, :edit, :update]
 
   def show
     @photos = @room.photos
+    @reviews = @room.reviews
+    @hasReview = @reviews.find_by(user_id: current_user.id) if current_user
   end
 
   def index
@@ -40,6 +43,7 @@ before_action :set_room, only: [:show, :edit, :update]
       end
       redirect_to edit_room_path(@room), notice: "Room updated successfully."
   end
+end
   def edit
     if current_user.id == @room.user.id
       @photos = @room.photos

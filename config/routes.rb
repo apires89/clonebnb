@@ -1,18 +1,11 @@
 Rails.application.routes.draw do
 mount Attachinary::Engine => "/attachinary"
-  get 'rooms/new'
 
-  get 'rooms/show'
-
-  get 'rooms/index'
-
-  get 'rooms/create'
-
-  get 'rooms/update'
-
-  get 'rooms/edit'
-
+  resources :users
+  resources :rooms #do
+    #resources :photos
  resources :bookings
+ resources :ratings
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
