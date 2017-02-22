@@ -3,7 +3,7 @@ before_action :set_room, only: [:show, :edit, :update]
 
 # User must be authneticated before every controller action, except for show
   before_action :authenticate_user!, except: [:show]
-  has_attachments :photos, maximum: 10
+
 
   def new
     @room = current_user.rooms.build
