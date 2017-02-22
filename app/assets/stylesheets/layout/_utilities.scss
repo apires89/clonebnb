@@ -24,3 +24,18 @@
   background: #3b5998;
 }
 
+#container {
+  position: relative;
+  min-height: 100%;
+}
+
+#body {
+  margin: 0;
+  padding-bottom: 300px;
+}
+
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
