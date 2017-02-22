@@ -21,6 +21,8 @@ before_action :set_room, only: [:show, :edit, :update]
 
   def create
     @room = current_user.rooms.build(room_params)
+    start_date = Date.strptime(params[:room][:start_date], '%m-%d-%Y')
+    end_date = Date.strptime(params[:room][:end_date], '%m-%d-%Y')
     if @room.save
       if params[:images]
         params[:images].each do |image|
@@ -48,7 +50,7 @@ end
     if current_user.id == @room.user.id
       @photos = @room.photos
     else
-      redirect_to root_path, notice "You can't make changes to this room."
+      redirect_to root_path, notice: "You can't make changes to this room."
     end
   end
 
@@ -62,6 +64,6 @@ end
   params.require(:room).permit(
   :home_type, :room_type, :accomodate,
   :bedrooms, :bathrooms, :summary, :address, :has_tv,
-  :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, photos: [], :photo_cache, :url )
+  :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, :photo_cache, :url, photos: [] )
   end
 end
