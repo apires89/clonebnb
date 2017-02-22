@@ -8,6 +8,7 @@
   vertical-align: middle;
   position: absolute;
   bottom: 0;
+  margin-top: 200px;
 }
 
 .footer-container {
@@ -19,27 +20,4 @@
 
 .footer-section {
   flex-grow: 1;
-}
-
-.footer-social-links-wrapper {
-  transition: all 0.3s ease;
-  height: 80px;
-  width: 100%;
-  display: flex;
-  position: absolute;
-  bottom: 0;
-}
-
-.footer-social-links-container {
-  border-top: 1px solid $soft-lines;
-  margin: 0px 100px;
-  flex-grow: 1;
-  padding: 20px 15px;
-}
-
-.footer-social-links-container a {
-  float: right;
-  margin: 0px 15px 20px 15px;
-  font-size: 25px;
-  color: $gray-base;
 }
