@@ -1,23 +1,8 @@
 class BookingslotsController < ApplicationController
-  def index
-  end
 
   def show
     @bookingslot = Bookingslot.find(params[:id])
   end
-
-  def edit
-  end
-
-  def create
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
 
   private
   def bookingslot_from_id
