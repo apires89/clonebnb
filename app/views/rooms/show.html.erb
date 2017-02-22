@@ -1,62 +1,51 @@
-<% content_for(:title) do %>
-  <%= @room.title %> is on AIRBNB-CLONE
-<% end %>
-<% content_for(:description) do %>
-  <%= @room.description %> is one the best room
-<% end %>
 
-<p id="notice"><%= notice %></p>
+<div class="show-banner banner">
 
-<p>
-  <strong>Title:</strong>
-  <%= @room.title %>
-</p>
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @room.address %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @room.description %>
-</p>
 
-<p>
-  <strong>Stars:</strong>
-  <%= @room.stars %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @room.user_id %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="row hide-md text-center">
+        <%= render 'tabs'  %>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <%= render 'home-card' %>
+        </div>
+      </div>
+      <div class="col-lg-4">
 
-<!-- <p>
-  <strong>Latitude:</strong>
-  <%= @room.latitude %>
-</p>
-<p>
-  <strong>Longitude:</strong>
-  <%= @room.longitude %>
-</p> -->
+      </div>
+    </div>
+  </div>
+</div>
 
-<ul>
-  <% @room.reviews.each do |review| %>
-  <li><%= review.content %></li>
-  <% end %>
-</ul>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %> |
-<%= link_to 'info about owner', owner_room_path(@room) %>|
-<%= link_to 'Add review', new_room_review_path(@room) %>
 
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      var coord = <%= raw @flat_coordinates.to_json %>;
-      alert('Room coordinates are ' + coord.lat + ', ' + coord.lng);
-    });
-  <% end %>
-<% end %>
+
+
+
+
+<a href="logo.png" class="swipebox" title="My Caption">
+<img src="images/log.png" alt="image">
+</a>
+
+<script type="text/javascript">
+$(function(){
+
+$( '#gallery' ).click( function( e ) {
+  e.preventDefault();
+  $.swipebox( [
+    { href:'big/image1.jpg', title:'My Caption' },
+    { href:'big/image2.jpg', title:'My Second Caption' }
+  ] );
+} );
+});
+</script>
+<script src="lib/jquery-2.0.3.js"></script>
+<script src="src/js/jquery.swipebox.js"></script>
+
