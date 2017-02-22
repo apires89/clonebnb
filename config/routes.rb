@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 mount Attachinary::Engine => "/attachinary"
 
-  resources :users
   resources :rooms #do
     #resources :photos
  resources :bookings
