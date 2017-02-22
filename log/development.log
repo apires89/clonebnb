@@ -16434,3 +16434,1502 @@ puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 =======
 >>>>>>> master
 >>>>>>> master
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2299518432844437105);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2299518432844437105)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2299518432844437105);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2299518432844437105)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mBooking Load (23.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = NULL WHERE "booking_slots"."booking_id" = $1[0m  [["booking_id", 48]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 48]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = NULL WHERE "booking_slots"."booking_id" = $1[0m  [["booking_id", 49]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 49]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = NULL WHERE "booking_slots"."booking_id" = $1[0m  [["booking_id", 50]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 50]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = NULL WHERE "booking_slots"."booking_id" = $1[0m  [["booking_id", 51]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 51]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = NULL WHERE "booking_slots"."booking_id" = $1[0m  [["booking_id", 52]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 52]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = NULL WHERE "booking_slots"."booking_id" = $1[0m  [["booking_id", 53]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 53]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = NULL WHERE "booking_slots"."booking_id" = $1[0m  [["booking_id", 54]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 54]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (1.5ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 984]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 985]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 986]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1080]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1083]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 976]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 977]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 978]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 979]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 980]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 981]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 982]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 983]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 975]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1039]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1040]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 987]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 988]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 989]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 990]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 991]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 992]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 993]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 994]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 995]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 996]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 997]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 998]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 999]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1000]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1001]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1002]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1003]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1004]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1005]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1006]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1007]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1008]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1009]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1010]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1011]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1012]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1013]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1014]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1015]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1016]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1017]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1018]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1019]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1020]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1021]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1022]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1023]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1024]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1025]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1026]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1027]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1028]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1029]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1030]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1031]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1032]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1033]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1034]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1035]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1036]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1037]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1038]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1041]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1042]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1043]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1044]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1045]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1046]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1047]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1048]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1049]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1050]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1051]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1052]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1053]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1054]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1055]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1056]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1057]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1058]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1059]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1060]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1061]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1062]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1063]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1064]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1065]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1066]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1067]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1068]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1069]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1070]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1071]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1072]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1073]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1074]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1075]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1076]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1077]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1078]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1079]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1081]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1082]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1084]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1085]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1086]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1087]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1088]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1089]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1136]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1137]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1090]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1091]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1092]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1093]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1094]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1095]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1096]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1097]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1098]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1099]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1100]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1101]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1102]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1103]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1104]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1105]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1106]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1107]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1108]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1109]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1110]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1111]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1112]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1113]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1114]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1115]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1116]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1117]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1118]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1119]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1120]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1121]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1122]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1123]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1124]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1125]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1126]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1127]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1128]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1129]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1130]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1131]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1132]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1133]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1134]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1135]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1138]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1139]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "booking_slots" WHERE "booking_slots"."id" = $1[0m  [["id", 1140]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (2.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingSlot Load (0.3ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 36]]
+  [1m[36mAttachinary::File Load (1.9ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 36], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 36]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 37]]
+  [1m[36mAttachinary::File Load (0.4ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 37], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 37]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingSlot Load (0.3ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 38]]
+  [1m[36mAttachinary::File Load (0.4ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 38], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 38]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingSlot Load (0.3ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 39]]
+  [1m[36mAttachinary::File Load (0.4ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 39], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 39]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingSlot Load (0.4ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 40]]
+  [1m[36mAttachinary::File Load (0.5ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 40], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 40]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 76]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 76]]
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 76]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 77]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 77]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 77]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 78]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 78]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 78]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 79]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 79]]
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 79]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 80]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 80]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 80]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 81]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 81]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 81]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 82]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 82]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 82]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 83]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 83]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 83]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 84]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 84]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 84]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = $1[0m  [["user_id", 85]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 85]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 85]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test0@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test0@example.com"], ["encrypted_password", "$2a$11$kiy9npBSIvfAQHYxxPS/2uDRNZhy0Lh281fFBW0XqTlABhR3K1L9C"], ["created_at", 2017-02-22 11:36:52 UTC], ["updated_at", 2017-02-22 11:36:52 UTC], ["phone_number", "948-845-5814"], ["fullname", "Emery Wisoky PhD"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "rooms" ("home_type", "room_type", "address", "price", "bedrooms", "accomodate", "summary", "has_tv", "has_kitchen", "has_aircon", "has_heating", "has_wifi", "created_at", "updated_at", "user_id", "bathrooms") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"[0m  [["home_type", "apartment"], ["room_type", "double"], ["address", "470 Botsford Harbors"], ["price", 140], ["bedrooms", 2], ["accomodate", 5], ["summary", "Nisi omnis animi qui voluptatem. Nostrum qui earum quidem deleniti. Voluptates perspiciatis repellat ea hic. Facere illo tempore est. Facere et occaecati perferendis aut. Sed repudiandae nihil dicta optio explicabo. Accusantium quam error."], ["has_tv", true], ["has_kitchen", false], ["has_aircon", true], ["has_heating", true], ["has_wifi", true], ["created_at", 2017-02-22 11:36:52 UTC], ["updated_at", 2017-02-22 11:36:52 UTC], ["user_id", 86], ["bathrooms", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAttachinary::File Load (0.8ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 41], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 41], ["scope", "photos"], ["public_id", "yifuj9gm1qdi7j6ridux"], ["version", "1487763413"], ["width", 1900], ["height", 1080], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:36:57 UTC], ["updated_at", 2017-02-22 11:36:57 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 41], ["scope", "photos"], ["public_id", "bt45qmxhogkp0krts69y"], ["version", "1487763414"], ["width", 1599], ["height", 1021], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:36:58 UTC], ["updated_at", 2017-02-22 11:36:58 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 41], ["scope", "photos"], ["public_id", "os221ekks4h0gfqhr5op"], ["version", "1487763415"], ["width", 700], ["height", 300], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:36:58 UTC], ["updated_at", 2017-02-22 11:36:58 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 41], ["scope", "photos"], ["public_id", "sox4lr13vjsa6iqkyxml"], ["version", "1487763416"], ["width", 1024], ["height", 1024], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:36:59 UTC], ["updated_at", 2017-02-22 11:36:59 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 41], ["scope", "photos"], ["public_id", "eygmjo5zkhdk4qw27nsv"], ["version", "1487763417"], ["width", 1280], ["height", 960], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:36:59 UTC], ["updated_at", 2017-02-22 11:36:59 UTC]]
+  [1m[35m (217.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 04 Mar 2017], ["day_price", #<BigDecimal:55beda3905c8,'0.63E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 05 Mar 2017], ["day_price", #<BigDecimal:55beda3883a0,'0.63E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 06 Mar 2017], ["day_price", #<BigDecimal:55beda36b458,'0.63E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 07 Mar 2017], ["day_price", #<BigDecimal:55beda346d38,'0.63E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 08 Mar 2017], ["day_price", #<BigDecimal:55beda33f100,'0.63E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 09 Mar 2017], ["day_price", #<BigDecimal:55beda32b420,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 10 Mar 2017], ["day_price", #<BigDecimal:55beda30f680,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 11 Mar 2017], ["day_price", #<BigDecimal:55beda2feab0,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 12 Mar 2017], ["day_price", #<BigDecimal:55beda2f5140,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 13 Mar 2017], ["day_price", #<BigDecimal:55beda2ce798,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 14 Mar 2017], ["day_price", #<BigDecimal:55beda2c6e58,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 15 Mar 2017], ["day_price", #<BigDecimal:55beda2bb710,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 16 Mar 2017], ["day_price", #<BigDecimal:55beda28e490,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 17 Mar 2017], ["day_price", #<BigDecimal:55beda274568,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 18 Mar 2017], ["day_price", #<BigDecimal:55beda25c148,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 19 Mar 2017], ["day_price", #<BigDecimal:55beda246258,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 20 Mar 2017], ["day_price", #<BigDecimal:55beda227588,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 21 Mar 2017], ["day_price", #<BigDecimal:55beda20c620,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 22 Mar 2017], ["day_price", #<BigDecimal:55beda201dd8,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 23 Mar 2017], ["day_price", #<BigDecimal:55beda1e5cf0,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 24 Mar 2017], ["day_price", #<BigDecimal:55beda1d3410,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 25 Mar 2017], ["day_price", #<BigDecimal:55beda1bfb18,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 26 Mar 2017], ["day_price", #<BigDecimal:55beda1a3eb8,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 27 Mar 2017], ["day_price", #<BigDecimal:55beda17b8f0,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 28 Mar 2017], ["day_price", #<BigDecimal:55beda159a98,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 29 Mar 2017], ["day_price", #<BigDecimal:55beda133870,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 30 Mar 2017], ["day_price", #<BigDecimal:55beda129190,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 31 Mar 2017], ["day_price", #<BigDecimal:55beda108558,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 01 Apr 2017], ["day_price", #<BigDecimal:55beda0e8528,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 02 Apr 2017], ["day_price", #<BigDecimal:55beda0bb7a8,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 03 Apr 2017], ["day_price", #<BigDecimal:55beda099ec8,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 04 Apr 2017], ["day_price", #<BigDecimal:55beda04a4b8,'0.43E2',9(27)>], ["created_at", 2017-02-22 11:37:00 UTC], ["updated_at", 2017-02-22 11:37:00 UTC], ["room_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test1@example.com"], ["encrypted_password", "$2a$11$zVrzbyYWVNieFrgfJbx45OA9wnxT2CH5rlBD/O3/pt1nFuBK74vkO"], ["created_at", 2017-02-22 11:37:01 UTC], ["updated_at", 2017-02-22 11:37:01 UTC], ["phone_number", "333-078-2782"], ["fullname", "Russ Leannon I"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test2@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test2@example.com"], ["encrypted_password", "$2a$11$OyEY8G2n3kkcUzdv6M7Xjuue/Cl5wiGG4Ug61rKTq7WiLr.Yrjzj6"], ["created_at", 2017-02-22 11:37:01 UTC], ["updated_at", 2017-02-22 11:37:01 UTC], ["phone_number", "174.695.1024"], ["fullname", "Marshall Becker"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "rooms" ("home_type", "room_type", "address", "price", "bedrooms", "accomodate", "summary", "has_tv", "has_kitchen", "has_aircon", "has_heating", "has_wifi", "created_at", "updated_at", "user_id", "bathrooms") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"[0m  [["home_type", "apartment"], ["room_type", "double"], ["address", "6541 Haley Street"], ["price", 175], ["bedrooms", 2], ["accomodate", 3], ["summary", "Sit provident aut iste. Vero cum qui non. Quam sit ea eum. Dolorem soluta sed est unde necessitatibus. Voluptas nobis rerum. Laborum quae quidem sint et aut est autem. Aut quisquam voluptatum sint in velit voluptas."], ["has_tv", false], ["has_kitchen", true], ["has_aircon", true], ["has_heating", true], ["has_wifi", false], ["created_at", 2017-02-22 11:37:01 UTC], ["updated_at", 2017-02-22 11:37:01 UTC], ["user_id", 88], ["bathrooms", 3]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAttachinary::File Load (0.5ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 42], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 42], ["scope", "photos"], ["public_id", "vgtmdwvbxabx7xoogymj"], ["version", "1487763421"], ["width", 1900], ["height", 1080], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:06 UTC], ["updated_at", 2017-02-22 11:37:06 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 42], ["scope", "photos"], ["public_id", "hcdaintd6gb8ogmp9etn"], ["version", "1487763422"], ["width", 1599], ["height", 1021], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:06 UTC], ["updated_at", 2017-02-22 11:37:06 UTC]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 42], ["scope", "photos"], ["public_id", "axlt5vfs8xw1twoubjue"], ["version", "1487763424"], ["width", 700], ["height", 300], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:07 UTC], ["updated_at", 2017-02-22 11:37:07 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 42], ["scope", "photos"], ["public_id", "ddk42au2iokkyv3riqpi"], ["version", "1487763424"], ["width", 1024], ["height", 1024], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:07 UTC], ["updated_at", 2017-02-22 11:37:07 UTC]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 42], ["scope", "photos"], ["public_id", "oljpzcxxz3jocbv9h4gk"], ["version", "1487763425"], ["width", 1280], ["height", 960], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:08 UTC], ["updated_at", 2017-02-22 11:37:08 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 19 Mar 2017], ["day_price", #<BigDecimal:55bed85f2fe8,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 20 Mar 2017], ["day_price", #<BigDecimal:55bed8580a60,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 21 Mar 2017], ["day_price", #<BigDecimal:55bed8512c68,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 22 Mar 2017], ["day_price", #<BigDecimal:55bed84ace40,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 23 Mar 2017], ["day_price", #<BigDecimal:55bed842cfb0,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 24 Mar 2017], ["day_price", #<BigDecimal:55bed83da2b0,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 25 Mar 2017], ["day_price", #<BigDecimal:55bed8363d90,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 26 Mar 2017], ["day_price", #<BigDecimal:55bed8287840,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 27 Mar 2017], ["day_price", #<BigDecimal:55bed81c8580,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 28 Mar 2017], ["day_price", #<BigDecimal:55bed815f530,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 29 Mar 2017], ["day_price", #<BigDecimal:55bed8139100,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 30 Mar 2017], ["day_price", #<BigDecimal:55bed810d668,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 31 Mar 2017], ["day_price", #<BigDecimal:55bed80c0fc0,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 01 Apr 2017], ["day_price", #<BigDecimal:55bed8094470,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 02 Apr 2017], ["day_price", #<BigDecimal:55bed806d230,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 03 Apr 2017], ["day_price", #<BigDecimal:55bed80394d0,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 04 Apr 2017], ["day_price", #<BigDecimal:55bed8011f98,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 05 Apr 2017], ["day_price", #<BigDecimal:55bed7ff1298,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 06 Apr 2017], ["day_price", #<BigDecimal:55bed7fc86e0,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 07 Apr 2017], ["day_price", #<BigDecimal:55bed7f9bf50,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 08 Apr 2017], ["day_price", #<BigDecimal:55bed7f8c6b8,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 09 Apr 2017], ["day_price", #<BigDecimal:55bed7f31da8,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 10 Apr 2017], ["day_price", #<BigDecimal:55bed7eb8200,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 11 Apr 2017], ["day_price", #<BigDecimal:55bed7e5bb68,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 12 Apr 2017], ["day_price", #<BigDecimal:55bed7e107f8,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 13 Apr 2017], ["day_price", #<BigDecimal:55bed7dbf790,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 14 Apr 2017], ["day_price", #<BigDecimal:55bed7d8d218,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 15 Apr 2017], ["day_price", #<BigDecimal:55bed7d38128,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 16 Apr 2017], ["day_price", #<BigDecimal:55bed6e9a738,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 17 Apr 2017], ["day_price", #<BigDecimal:55bed6d535c8,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 18 Apr 2017], ["day_price", #<BigDecimal:55bed6c76088,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 19 Apr 2017], ["day_price", #<BigDecimal:55bed6bd82e8,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 20 Apr 2017], ["day_price", #<BigDecimal:55bed6a71238,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 21 Apr 2017], ["day_price", #<BigDecimal:55bed6933088,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 22 Apr 2017], ["day_price", #<BigDecimal:55bed67d6168,'0.78E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 23 Apr 2017], ["day_price", #<BigDecimal:55bed60b5410,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 24 Apr 2017], ["day_price", #<BigDecimal:55bed5e64080,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 25 Apr 2017], ["day_price", #<BigDecimal:55bed58c7028,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 26 Apr 2017], ["day_price", #<BigDecimal:55bedb211d68,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 27 Apr 2017], ["day_price", #<BigDecimal:55bedb1fd0c0,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 28 Apr 2017], ["day_price", #<BigDecimal:55bedb0703d8,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 29 Apr 2017], ["day_price", #<BigDecimal:55bedb0612c0,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 30 Apr 2017], ["day_price", #<BigDecimal:55bedb04eb48,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 01 May 2017], ["day_price", #<BigDecimal:55bedb033eb0,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 02 May 2017], ["day_price", #<BigDecimal:55bedb01df70,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 03 May 2017], ["day_price", #<BigDecimal:55bedb006e60,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 04 May 2017], ["day_price", #<BigDecimal:55bedaff0750,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 05 May 2017], ["day_price", #<BigDecimal:55bedafe1778,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 06 May 2017], ["day_price", #<BigDecimal:55bedafcfd98,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 07 May 2017], ["day_price", #<BigDecimal:55bedafc4128,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 08 May 2017], ["day_price", #<BigDecimal:55bedafb8c60,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 09 May 2017], ["day_price", #<BigDecimal:55bedafa96c0,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 10 May 2017], ["day_price", #<BigDecimal:55bedaf9da28,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 11 May 2017], ["day_price", #<BigDecimal:55bedaf8dd58,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 12 May 2017], ["day_price", #<BigDecimal:55bedaf82610,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 13 May 2017], ["day_price", #<BigDecimal:55bedaf703c0,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 14 May 2017], ["day_price", #<BigDecimal:55beda4dfd70,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 15 May 2017], ["day_price", #<BigDecimal:7f9958095be8,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 16 May 2017], ["day_price", #<BigDecimal:7f9958054f58,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 17 May 2017], ["day_price", #<BigDecimal:7f99580261d0,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 18 May 2017], ["day_price", #<BigDecimal:7f995800e1e8,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 19 May 2017], ["day_price", #<BigDecimal:55bedb299448,'0.68E2',9(27)>], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["room_id", 42]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test3@example.com"], ["encrypted_password", "$2a$11$59kjVITxUhDt0jdpePL9wun8GRiWOqHzSE.wKPRRqTByxOXiN7Kk."], ["created_at", 2017-02-22 11:37:09 UTC], ["updated_at", 2017-02-22 11:37:09 UTC], ["phone_number", "1-456-886-4673"], ["fullname", "Ms. Walker Denesik"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test4@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test4@example.com"], ["encrypted_password", "$2a$11$G/5CNa5Ugf39ol4vZ1ISveaw6bO6Xx/BMEjFVleGCg9OhWYSOEpDq"], ["created_at", 2017-02-22 11:37:10 UTC], ["updated_at", 2017-02-22 11:37:10 UTC], ["phone_number", "108.872.4614"], ["fullname", "Benedict Smitham II"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "rooms" ("home_type", "room_type", "address", "price", "bedrooms", "accomodate", "summary", "has_tv", "has_kitchen", "has_aircon", "has_heating", "has_wifi", "created_at", "updated_at", "user_id", "bathrooms") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"[0m  [["home_type", "apartment"], ["room_type", "whole apertment"], ["address", "7851 Rosalinda Walk"], ["price", 115], ["bedrooms", 2], ["accomodate", 2], ["summary", "Neque accusantium facere quod tempora vel. Reprehenderit ut eaque atque pariatur perferendis aut molestias. Consequatur et necessitatibus sit voluptatem dolorem. Eaque nobis maxime praesentium. Incidunt quos tenetur commodi vel amet in veniam. Voluptas libero magni id culpa consequuntur. Sapiente accusantium sunt et."], ["has_tv", true], ["has_kitchen", true], ["has_aircon", false], ["has_heating", true], ["has_wifi", true], ["created_at", 2017-02-22 11:37:10 UTC], ["updated_at", 2017-02-22 11:37:10 UTC], ["user_id", 90], ["bathrooms", 2]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAttachinary::File Load (0.6ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 43], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 43], ["scope", "photos"], ["public_id", "nmcju2hdajxv8hh7torr"], ["version", "1487763430"], ["width", 1900], ["height", 1080], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:14 UTC], ["updated_at", 2017-02-22 11:37:14 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 43], ["scope", "photos"], ["public_id", "gngeof1scfctyy7t13u7"], ["version", "1487763431"], ["width", 1599], ["height", 1021], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:14 UTC], ["updated_at", 2017-02-22 11:37:14 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 43], ["scope", "photos"], ["public_id", "kyqzzeshutwd5ym1ukz1"], ["version", "1487763432"], ["width", 700], ["height", 300], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:15 UTC], ["updated_at", 2017-02-22 11:37:15 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 43], ["scope", "photos"], ["public_id", "i8zurdby6zq1hqakip9k"], ["version", "1487763432"], ["width", 1024], ["height", 1024], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:15 UTC], ["updated_at", 2017-02-22 11:37:15 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 43], ["scope", "photos"], ["public_id", "gzz1dnfuzcpc8mqjnxit"], ["version", "1487763433"], ["width", 1280], ["height", 960], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 20 Mar 2017], ["day_price", #<BigDecimal:55bedaca9f38,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 21 Mar 2017], ["day_price", #<BigDecimal:55bedac68178,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 22 Mar 2017], ["day_price", #<BigDecimal:55bedac60748,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 23 Mar 2017], ["day_price", #<BigDecimal:55bedac3fa98,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 24 Mar 2017], ["day_price", #<BigDecimal:55bedac30fc0,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 25 Mar 2017], ["day_price", #<BigDecimal:55bedac08ac0,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 26 Mar 2017], ["day_price", #<BigDecimal:55bedabd7c90,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 27 Mar 2017], ["day_price", #<BigDecimal:55bedaba5f60,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 28 Mar 2017], ["day_price", #<BigDecimal:55bedab7d0d8,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 29 Mar 2017], ["day_price", #<BigDecimal:55bedab66dd8,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 30 Mar 2017], ["day_price", #<BigDecimal:55bedab5fdd0,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 31 Mar 2017], ["day_price", #<BigDecimal:55bedab454d0,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 01 Apr 2017], ["day_price", #<BigDecimal:55bedab3ef68,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 02 Apr 2017], ["day_price", #<BigDecimal:55bedab2c660,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 03 Apr 2017], ["day_price", #<BigDecimal:55bedab1a320,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 04 Apr 2017], ["day_price", #<BigDecimal:55bedaaf9a58,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 05 Apr 2017], ["day_price", #<BigDecimal:55bedaaeb688,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 06 Apr 2017], ["day_price", #<BigDecimal:55bedaae3e38,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 07 Apr 2017], ["day_price", #<BigDecimal:55bedaac7da0,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 08 Apr 2017], ["day_price", #<BigDecimal:55bedaaae990,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 09 Apr 2017], ["day_price", #<BigDecimal:55bedaa99bf8,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 10 Apr 2017], ["day_price", #<BigDecimal:55bedaa757f8,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 11 Apr 2017], ["day_price", #<BigDecimal:55bedaa54fd0,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 12 Apr 2017], ["day_price", #<BigDecimal:55bedaa2b2c0,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 13 Apr 2017], ["day_price", #<BigDecimal:55bedaa1b7a8,'0.42E2',9(27)>], ["created_at", 2017-02-22 11:37:16 UTC], ["updated_at", 2017-02-22 11:37:16 UTC], ["room_id", 43]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test5@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test5@example.com"], ["encrypted_password", "$2a$11$m46k3x1qmI49T6vOX6ZU3OHx99pVNZquZt3VIsKkA5QyktvvyMuPK"], ["created_at", 2017-02-22 11:37:17 UTC], ["updated_at", 2017-02-22 11:37:17 UTC], ["phone_number", "1-154-859-9723"], ["fullname", "Myrtle Bernier"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test6@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test6@example.com"], ["encrypted_password", "$2a$11$OAzz82N5B8pLPGLEhqSuuuegOHINiwKkF9TXT5mZYUzjtcB.ZEUvy"], ["created_at", 2017-02-22 11:37:17 UTC], ["updated_at", 2017-02-22 11:37:17 UTC], ["phone_number", "1-579-435-2295"], ["fullname", "Dr. Anne Greenfelder"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "rooms" ("home_type", "room_type", "address", "price", "bedrooms", "accomodate", "summary", "has_tv", "has_kitchen", "has_aircon", "has_heating", "has_wifi", "created_at", "updated_at", "user_id", "bathrooms") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"[0m  [["home_type", "real"], ["room_type", "double"], ["address", "2308 Hauck Brooks"], ["price", 75], ["bedrooms", 3], ["accomodate", 5], ["summary", "Voluptates eum neque placeat nesciunt voluptatibus quia. Quo accusantium eaque minus id quam neque est. Ad itaque quibusdam beatae dolor. Consequatur quam porro temporibus voluptates consequatur aliquid. Iure at officia aut sed ipsam quibusdam ab."], ["has_tv", false], ["has_kitchen", false], ["has_aircon", false], ["has_heating", true], ["has_wifi", true], ["created_at", 2017-02-22 11:37:17 UTC], ["updated_at", 2017-02-22 11:37:17 UTC], ["user_id", 92], ["bathrooms", 3]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAttachinary::File Load (0.8ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 44], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 44], ["scope", "photos"], ["public_id", "sck5wn5bccfgxlhmcso8"], ["version", "1487763437"], ["width", 1900], ["height", 1080], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:20 UTC], ["updated_at", 2017-02-22 11:37:20 UTC]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 44], ["scope", "photos"], ["public_id", "ztjayyooxrk0gsw4m7kn"], ["version", "1487763438"], ["width", 1599], ["height", 1021], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:21 UTC], ["updated_at", 2017-02-22 11:37:21 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 44], ["scope", "photos"], ["public_id", "c8zmwlhohxlabfihgtyw"], ["version", "1487763439"], ["width", 700], ["height", 300], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:22 UTC], ["updated_at", 2017-02-22 11:37:22 UTC]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 44], ["scope", "photos"], ["public_id", "lhdwdue0ohqq8vox88xc"], ["version", "1487763439"], ["width", 1024], ["height", 1024], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:22 UTC], ["updated_at", 2017-02-22 11:37:22 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 44], ["scope", "photos"], ["public_id", "yggiwbd0v7sgrmnlgvxv"], ["version", "1487763440"], ["width", 1280], ["height", 960], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 27 Feb 2017], ["day_price", #<BigDecimal:55beda2b9e88,'0.25E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 28 Feb 2017], ["day_price", #<BigDecimal:55beda28c8c0,'0.25E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 01 Mar 2017], ["day_price", #<BigDecimal:55beda267098,'0.25E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 02 Mar 2017], ["day_price", #<BigDecimal:55beda24e250,'0.25E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 03 Mar 2017], ["day_price", #<BigDecimal:55beda2328e8,'0.25E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 04 Mar 2017], ["day_price", #<BigDecimal:55beda2262f0,'0.25E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 05 Mar 2017], ["day_price", #<BigDecimal:55beda2071c0,'0.25E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 06 Mar 2017], ["day_price", #<BigDecimal:55beda200a78,'0.25E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 07 Mar 2017], ["day_price", #<BigDecimal:55beda1e49e0,'0.25E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 08 Mar 2017], ["day_price", #<BigDecimal:55beda1d2268,'0.35E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 09 Mar 2017], ["day_price", #<BigDecimal:55beda1be858,'0.35E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 10 Mar 2017], ["day_price", #<BigDecimal:55beda1a1b40,'0.35E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 11 Mar 2017], ["day_price", #<BigDecimal:55beda178df8,'0.35E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 12 Mar 2017], ["day_price", #<BigDecimal:55beda14f430,'0.35E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 13 Mar 2017], ["day_price", #<BigDecimal:55beda132290,'0.35E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 14 Mar 2017], ["day_price", #<BigDecimal:55beda127020,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 15 Mar 2017], ["day_price", #<BigDecimal:55beda0fdc70,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 16 Mar 2017], ["day_price", #<BigDecimal:55beda0dd790,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 17 Mar 2017], ["day_price", #<BigDecimal:55beda0b8b70,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 18 Mar 2017], ["day_price", #<BigDecimal:55beda08e348,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 19 Mar 2017], ["day_price", #<BigDecimal:55beda044900,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 20 Mar 2017], ["day_price", #<BigDecimal:55bed9ffccb8,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:23 UTC], ["updated_at", 2017-02-22 11:37:23 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 21 Mar 2017], ["day_price", #<BigDecimal:55bed9fe15a8,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 22 Mar 2017], ["day_price", #<BigDecimal:55bed9fb39c8,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 23 Mar 2017], ["day_price", #<BigDecimal:55bed9f91da0,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 24 Mar 2017], ["day_price", #<BigDecimal:55bed9f7c630,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 25 Mar 2017], ["day_price", #<BigDecimal:55bed9f3aff0,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 26 Mar 2017], ["day_price", #<BigDecimal:55bed9f11128,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 27 Mar 2017], ["day_price", #<BigDecimal:55bed9ecf3b8,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 28 Mar 2017], ["day_price", #<BigDecimal:55bed9e89138,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 29 Mar 2017], ["day_price", #<BigDecimal:55bed9e35d58,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 30 Mar 2017], ["day_price", #<BigDecimal:55bed9ddb470,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 31 Mar 2017], ["day_price", #<BigDecimal:55bed9d93be8,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 01 Apr 2017], ["day_price", #<BigDecimal:55bed9d400b0,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 02 Apr 2017], ["day_price", #<BigDecimal:55bed9cf16b8,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 03 Apr 2017], ["day_price", #<BigDecimal:55bed9ce9558,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 04 Apr 2017], ["day_price", #<BigDecimal:55bed9ce2c30,'0.4E2',9(27)>], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["room_id", 44]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test7@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test7@example.com"], ["encrypted_password", "$2a$11$udL9xFQueaefW5Z5MlBumuEykd22n52vUw.zN1s4h24vzPEQNqNAm"], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["phone_number", "(769) 331-2304"], ["fullname", "Brant Hintz"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test8@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test8@example.com"], ["encrypted_password", "$2a$11$k.7Qx6fDiHMJfGU4drM4XeQkfeWsxxTYDNpyZphPlpYvCU8OT4OAS"], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["phone_number", "272-937-1149"], ["fullname", "Aron Stehr"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "rooms" ("home_type", "room_type", "address", "price", "bedrooms", "accomodate", "summary", "has_tv", "has_kitchen", "has_aircon", "has_heating", "has_wifi", "created_at", "updated_at", "user_id", "bathrooms") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"[0m  [["home_type", "apartment"], ["room_type", "whole apertment"], ["address", "7498 Kovacek Springs"], ["price", 75], ["bedrooms", 2], ["accomodate", 2], ["summary", "Aliquam veritatis velit magni molestiae. Odit aliquam qui aliquid numquam assumenda. Earum optio et. Blanditiis delectus quia voluptates."], ["has_tv", true], ["has_kitchen", true], ["has_aircon", false], ["has_heating", true], ["has_wifi", true], ["created_at", 2017-02-22 11:37:24 UTC], ["updated_at", 2017-02-22 11:37:24 UTC], ["user_id", 94], ["bathrooms", 3]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAttachinary::File Load (0.6ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 45], ["attachinariable_type", "Room"], ["scope", "photos"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 45], ["scope", "photos"], ["public_id", "zff4iufegh1wnpzvenlq"], ["version", "1487763445"], ["width", 1900], ["height", 1080], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:28 UTC], ["updated_at", 2017-02-22 11:37:28 UTC]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 45], ["scope", "photos"], ["public_id", "a0gvhlsjtwljyutmusyp"], ["version", "1487763446"], ["width", 1599], ["height", 1021], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:29 UTC], ["updated_at", 2017-02-22 11:37:29 UTC]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 45], ["scope", "photos"], ["public_id", "pvqpfx30lzeatjml8e7i"], ["version", "1487763446"], ["width", 700], ["height", 300], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:29 UTC], ["updated_at", 2017-02-22 11:37:29 UTC]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 45], ["scope", "photos"], ["public_id", "vg6tn3bzizf8qktxuidk"], ["version", "1487763447"], ["width", 1024], ["height", 1024], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:30 UTC], ["updated_at", 2017-02-22 11:37:30 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attachinary_files" ("attachinariable_type", "attachinariable_id", "scope", "public_id", "version", "width", "height", "format", "resource_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attachinariable_type", "Room"], ["attachinariable_id", 45], ["scope", "photos"], ["public_id", "gmfy6hz4ujgs8fren5uo"], ["version", "1487763448"], ["width", 1280], ["height", 960], ["format", "jpg"], ["resource_type", "image"], ["created_at", 2017-02-22 11:37:30 UTC], ["updated_at", 2017-02-22 11:37:30 UTC]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 06 Mar 2017], ["day_price", #<BigDecimal:55bed8096478,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 07 Mar 2017], ["day_price", #<BigDecimal:55bed806ffa8,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 08 Mar 2017], ["day_price", #<BigDecimal:55bed803a830,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 09 Mar 2017], ["day_price", #<BigDecimal:55bed8013550,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 10 Mar 2017], ["day_price", #<BigDecimal:55bed7ff2af8,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 11 Mar 2017], ["day_price", #<BigDecimal:55bed7fca710,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 12 Mar 2017], ["day_price", #<BigDecimal:55bed7f9ee58,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 13 Mar 2017], ["day_price", #<BigDecimal:55bed7f8e210,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 14 Mar 2017], ["day_price", #<BigDecimal:55bed7f49138,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 15 Mar 2017], ["day_price", #<BigDecimal:55bed7eb9c90,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 16 Mar 2017], ["day_price", #<BigDecimal:55bed7e81318,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 17 Mar 2017], ["day_price", #<BigDecimal:55bed7e654d8,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 18 Mar 2017], ["day_price", #<BigDecimal:55bed7e37498,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 19 Mar 2017], ["day_price", #<BigDecimal:55bed7e16900,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 20 Mar 2017], ["day_price", #<BigDecimal:55bed7dd85b0,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 21 Mar 2017], ["day_price", #<BigDecimal:55bed7dca780,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 22 Mar 2017], ["day_price", #<BigDecimal:55bed7db9688,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 23 Mar 2017], ["day_price", #<BigDecimal:55bed7dad2e8,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 24 Mar 2017], ["day_price", #<BigDecimal:55bed7d79e20,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 25 Mar 2017], ["day_price", #<BigDecimal:55bed7d566f0,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 26 Mar 2017], ["day_price", #<BigDecimal:55bed7d3b828,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 27 Mar 2017], ["day_price", #<BigDecimal:55bed6acc818,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Tue, 28 Mar 2017], ["day_price", #<BigDecimal:55bed6ee6c78,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Wed, 29 Mar 2017], ["day_price", #<BigDecimal:55bed6e27b48,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 30 Mar 2017], ["day_price", #<BigDecimal:55bed6da21f0,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Fri, 31 Mar 2017], ["day_price", #<BigDecimal:55bed6d52420,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sat, 01 Apr 2017], ["day_price", #<BigDecimal:55bed6d0f148,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Sun, 02 Apr 2017], ["day_price", #<BigDecimal:55bed6c7fe30,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "booking_slots" ("date", "day_price", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Mon, 03 Apr 2017], ["day_price", #<BigDecimal:55bed6c2ce10,'0.41E2',9(27)>], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["room_id", 45]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test9@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone_number", "fullname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test9@example.com"], ["encrypted_password", "$2a$11$KX8KcA1O6VisMzkkM8bFlOqlmbBy5p2AU7ElKN/wL8t2zbmDRPWk."], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC], ["phone_number", "524-694-1126"], ["fullname", "Laurianne Romaguera"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 41]]
+  [1m[36mBookingSlot Load (1.1ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-07') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-08') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-09') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-10') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "start_date", "end_date", "num_of_persons", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 86], ["start_date", Tue, 07 Mar 2017], ["end_date", Sat, 11 Mar 2017], ["num_of_persons", 3], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-07') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 55], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1144]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-08') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 55], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1145]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-09') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 55], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1146]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-10') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 55], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1147]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 44]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-18') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-19') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-20') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-21') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-22') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-23') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "start_date", "end_date", "num_of_persons", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 87], ["start_date", Sat, 18 Mar 2017], ["end_date", Fri, 24 Mar 2017], ["num_of_persons", 5], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-18') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 56], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1279]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-19') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 56], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1280]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-20') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 56], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1281]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-21') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 56], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1282]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-22') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 56], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1283]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-23') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 56], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1284]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 42]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-29') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-30') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-05-01') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-05-02') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-05-03') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-05-04') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "start_date", "end_date", "num_of_persons", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 88], ["start_date", Sat, 29 Apr 2017], ["end_date", Fri, 05 May 2017], ["num_of_persons", 2], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-29') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 57], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1214]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-30') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 57], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1215]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.9ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-05-01') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 57], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1216]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-05-02') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 57], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1217]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-05-03') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 57], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1218]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.9ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-05-04') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 57], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1219]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.9ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 42]]
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-28') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-29') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "start_date", "end_date", "num_of_persons", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 89], ["start_date", Tue, 28 Mar 2017], ["end_date", Thu, 30 Mar 2017], ["num_of_persons", 1], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-28') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 58], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1182]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-29') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 58], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1183]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 44]]
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-12') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-13') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-14') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "start_date", "end_date", "num_of_persons", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 90], ["start_date", Sun, 12 Mar 2017], ["end_date", Wed, 15 Mar 2017], ["num_of_persons", 5], ["created_at", 2017-02-22 11:37:31 UTC], ["updated_at", 2017-02-22 11:37:31 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-12') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 59], ["updated_at", 2017-02-22 11:37:31 UTC], ["id", 1273]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-13') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 59], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1274]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-14') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 44], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 59], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1275]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.9ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 42]]
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-21') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "start_date", "end_date", "num_of_persons", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 91], ["start_date", Fri, 21 Apr 2017], ["end_date", Sat, 22 Apr 2017], ["num_of_persons", 1], ["created_at", 2017-02-22 11:37:32 UTC], ["updated_at", 2017-02-22 11:37:32 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-21') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 42], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 60], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1206]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 45]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-08') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 45], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-09') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 45], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-10') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 45], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-11') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 45], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "start_date", "end_date", "num_of_persons", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 92], ["start_date", Wed, 08 Mar 2017], ["end_date", Sun, 12 Mar 2017], ["num_of_persons", 2], ["created_at", 2017-02-22 11:37:32 UTC], ["updated_at", 2017-02-22 11:37:32 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-08') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 45], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 61], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1299]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-09') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 45], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 61], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1300]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-10') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 45], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 61], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1301]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-11') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 45], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 61], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1302]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 43]]
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-10') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 43], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-11') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 43], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-12') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 43], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-13') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 43], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "start_date", "end_date", "num_of_persons", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 93], ["start_date", Mon, 10 Apr 2017], ["end_date", Fri, 14 Apr 2017], ["num_of_persons", 1], ["created_at", 2017-02-22 11:37:32 UTC], ["updated_at", 2017-02-22 11:37:32 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-10') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 43], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 62], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1256]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-11') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 43], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 62], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1257]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-12') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 43], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 62], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1258]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-04-13') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 43], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 62], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1259]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 41]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-07') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mBookingSlot Load (0.5ms)[0m  [1m[34mSELECT "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1[0m  [["room_id", 41]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-23') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-24') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[36mBookingSlot Load (0.6ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-25') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "start_date", "end_date", "num_of_persons", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 95], ["start_date", Thu, 23 Mar 2017], ["end_date", Sun, 26 Mar 2017], ["num_of_persons", 3], ["created_at", 2017-02-22 11:37:32 UTC], ["updated_at", 2017-02-22 11:37:32 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.7ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-23') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 63], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1160]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-24') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 63], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1161]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookingSlot Load (0.8ms)[0m  [1m[34mSELECT  "booking_slots".* FROM "booking_slots" WHERE "booking_slots"."room_id" = $1 AND (date = '2017-03-25') ORDER BY "booking_slots"."id" ASC LIMIT $2[0m  [["room_id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "booking_slots" SET "booking_id" = $1, "updated_at" = $2 WHERE "booking_slots"."id" = $3[0m  [["booking_id", 63], ["updated_at", 2017-02-22 11:37:32 UTC], ["id", 1162]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" ORDER BY "rooms"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" ORDER BY "rooms"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAttachinary::File Load (1.1ms)[0m  [1m[34mSELECT "attachinary_files".* FROM "attachinary_files" WHERE "attachinary_files"."attachinariable_id" = $1 AND "attachinary_files"."attachinariable_type" = $2 AND "attachinary_files"."scope" = $3[0m  [["attachinariable_id", 41], ["attachinariable_type", "Room"], ["scope", "photos"]]

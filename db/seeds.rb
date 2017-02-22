@@ -11,7 +11,10 @@ Room.destroy_all
 User.destroy_all
 
 10.times do |i|
-  user = User.new
+  user = User.new({
+    phone_number: Faker::PhoneNumber.cell_phone,
+    fullname: Faker::Name.name
+    })
   user.email = "test#{i}@example.com"
   user.password = 'password'
   user.password_confirmation = 'password'
@@ -33,6 +36,15 @@ User.destroy_all
         bathrooms: rand(3) + 1
       })
     room.user = user
+    room.save!
+    pic_urls = [
+        "http://amari.azureedge.net/phuket/hotel-photos/deluxe-room-1.jpg",
+        "https://s-media-cache-ak0.pinimg.com/originals/cc/1f/fa/cc1ffa4845ce338a5c634b82e11c0db2.jpg",
+        "http://www.homebase.co.uk/cmsresource/image/69400/landscape_ratio7x3/700/300/7eadf37e43942ee4aec791a13dd171ab/Cj/bathroom-suites---static---header-image-hbo189854.jpg",
+        "http://www.ikea.com/gb/en/images/rooms/ikea-beauty-on-the-outside-calmness-on-the-inside__1364309640766-s4.jpg",
+        "http://www.whitsundayterraces.com/images_large/balcony_gets_audience.jpeg"
+    ]
+    room.photo_urls = pic_urls
     room.save!
     day = Date.today
     day = day + rand(40)
