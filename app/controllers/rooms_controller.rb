@@ -9,7 +9,7 @@ before_action :set_room, only: [:show, :edit, :update]
   end
 
   def show
-    @photos = @room.photos
+    @photos = @room.photo
   end
 
   def index
@@ -45,7 +45,7 @@ end
     if current_user.id == @room.user.id
       @photos = @room.photos
     else
-      redirect_to root_path, notice "You can't make changes to this room."
+      redirect_to :index, notice: "You can't make changes to this room."
     end
   end
 
