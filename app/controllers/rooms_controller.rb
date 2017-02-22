@@ -30,13 +30,26 @@ before_action :set_room, only: [:show, :edit, :update]
 
   def create
     @room = current_user.rooms.build(room_params)
-    if @room.save
+    if params[:room][:start_date].length == 0 || params[:room][:end_date].length == 0
+      render :new
+      return
+    end
+    day = Date.strptime(params[:room][:start_date].gsub('/','-'), '%d-%m-%Y')
+    end_date = Date.strptime(params[:room][:end_date].gsub('/','-'), '%d-%m-%Y')
+    price = params[:room][:price]
+    if @room.save && day < end_date
       if params[:images]
         params[:images].each do |image|
           @room.photos.create(image: image)
         end
       end
       @photos = @room.photos
+      while !(day === end_date)
+        slot = BookingSlot.new(date: day.to_s(:db), day_price: price)
+        slot.room = @room
+        slot.save!
+        day = day + 1
+      end
       redirect_to edit_room_path (@room), notice: "Saved Room Picture."
     else
       render :new
@@ -57,9 +70,7 @@ end
     if current_user.id == @room.user.id
       @photos = @room.photos
     else
-
       redirect_to :index, notice: "You can't make changes to this room."
-
     end
   end
 
@@ -71,7 +82,7 @@ end
 
   def room_params
   params.require(:room).permit(
-  :home_type, :room_type, :accomodate,
+  :name, :home_type, :room_type, :accomodate,
   :bedrooms, :bathrooms, :summary, :address, :has_tv,
   :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, :photo_cache, :url, photos: [] )
   end

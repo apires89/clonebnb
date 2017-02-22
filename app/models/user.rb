@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
   has_attachment  :avatar, accept: [:jpg, :png, :gif]
 
-
   has_many :rooms, dependent: :destroy
   has_many :bookings, dependent: :destroy
 
