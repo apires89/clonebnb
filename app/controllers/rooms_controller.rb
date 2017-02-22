@@ -62,6 +62,6 @@ end
   params.require(:room).permit(
   :home_type, :room_type, :accomodate,
   :bedrooms, :bathrooms, :summary, :address, :has_tv,
-  :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, :photo, :photo_cache, :url )
+  :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, photos: [], :photo_cache, :url )
   end
 end
