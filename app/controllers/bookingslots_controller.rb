@@ -3,6 +3,7 @@ class BookingslotsController < ApplicationController
   end
 
   def show
+    @bookingslot = Bookingslot.find(params[:id])
   end
 
   def edit
