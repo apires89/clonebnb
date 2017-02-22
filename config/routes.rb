@@ -3,8 +3,8 @@ mount Attachinary::Engine => "/attachinary"
 
   resources :rooms #do
     #resources :photos
- resources :bookings
- resources :ratings
+  resources :bookings
+  resources :ratings
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
