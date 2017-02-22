@@ -10,7 +10,7 @@ before_action :set_room, only: [:show, :edit, :update]
   end
 
   def show
-    @photos = @room.photos
+    @photos = @room.photo
     @reviews = @room.reviews
     @hasReview = @reviews.find_by(user_id: current_user.id) if current_user
   end
@@ -24,10 +24,10 @@ before_action :set_room, only: [:show, :edit, :update]
     if @room.save
       if params[:images]
         params[:images].each do |image|
-          @room.photos.create(image: image)
+          @room.photo.create(image: image)
         end
       end
-      @photos = @room.photos
+      @photos = @room.photo
       redirect_to edit_room_path (@room), notice: "Saved Room Picture."
     else
       render :new
@@ -38,7 +38,7 @@ before_action :set_room, only: [:show, :edit, :update]
     if @room.update(room_params)
       if params[:images]
         params[:images].each do |image|
-          @room.photos.create(image: image)
+          @room.photo.create(image: image)
         end
       end
       redirect_to edit_room_path(@room), notice: "Room updated successfully."
@@ -46,9 +46,9 @@ before_action :set_room, only: [:show, :edit, :update]
 end
   def edit
     if current_user.id == @room.user.id
-      @photos = @room.photos
+      @photos = @room.photo
     else
-      redirect_to root_path, notice "You can't make changes to this room."
+      redirect_to root_path, notice: "You can't make changes to this room."
     end
   end
 
@@ -62,6 +62,6 @@ end
   params.require(:room).permit(
   :home_type, :room_type, :accomodate,
   :bedrooms, :bathrooms, :summary, :address, :has_tv,
-  :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, photos: [], :photo_cache, :url )
+  :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, :photo_cache, :url, photos: [] )
   end
 end
