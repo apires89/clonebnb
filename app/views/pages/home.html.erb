@@ -1,21 +1,55 @@
-<h1>Pages#home</h1>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'A.jpg' %>');">
+  <div class="banner-content">
+    <h1>Welcome Home</h1>
+    <p>Select the room you want to rent</p>
 
-<div id="map" style="width: 100%; height: 600px;"></div>
+    <%= simple_form_for :search, url: rooms_path, method: :get, html: {class: "form-inline"} do |f| %>
+      <%= f.input :city, placeholder: 'City ?', label: false,input_html: {class: "form-control input-lg"} %>
+      <%= f.input :date, as: :date, label: false,input_html: {class: "form-control input-lg"} %>
+      <%= f.input :category, label: false,prompt: "Select category", collection: @categories, input_html: {class: "form-control input-lg"}%>
 
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      var handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function() {
-        markers = handler.addMarkers(<%= raw @hash.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-        if (markers.length == 0) {
-          handler.getMap().setZoom(2);
-        } else if (markers.length == 1) {
-          handler.getMap().setZoom(14);
-        }
-      });
-    });
-  <% end %>
-<% end %>
+      <p class="home_button"><%= f.button :submit, input_html: {class: "btn btn-primary btn-lg"}%></p>
+    <% end %>
+
+  </div>
+</div>
+
+<div class="text-center padded features">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">Enjoy your stay</h1>
+      <p>Be unique and rent the trendiest place</p>
+      <br>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <i class="fa fa-wheelchair-alt fa-3x" aria-hidden="true"></i>
+        <h2>Single Rooms</h2>
+        <p>The world is your new home.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
+        <h2>Suites</h2>
+        <p>Comfort</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <i class="fa fa-user-plus fa-3x" aria-hidden="true"></i>
+        <h2>Bunkbeds</h2>
+        <p>Discover a new culture and lifestyle.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 ">
+        <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+        <h2>KNAASSSSASSS</h2>
+        <p>Join a community you will love.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper-grey padded">
+  <div class="container">
+    <div class="row">
+      <h1 class='text-center'>Discover the Clonebnb selection </h1>
+      <p> RENDER CARDS </p>
+
+    </div>
+  </div>
+</div>
