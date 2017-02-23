@@ -3,13 +3,10 @@
 
 </div>
 
-
-
-
 <div class="container">
   <div class="row">
     <div class="col-lg-8">
-      <div class="row hide-md text-center">
+      <div class="bordered row hide-md text-center">
         <%= render 'tabs'  %>
       </div>
       <div class="row">
@@ -23,29 +20,40 @@
     </div>
   </div>
 </div>
+<div class="full-width-border"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+        <%= render 'listing-details' %>
+    </div>
+  </div>
+</div>
+
+<div id="map" style="width: 100%; height: 400px;"></div>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      var myLatLng = {lat: <%= @room.latitude.to_f %>, lng: <%= @room.longitude.to_f %>};
+      var handler = Gmaps.build('Google');
+      handler.buildMap({ internal: { id: 'map' } }, function() {
+        markers = handler.addMarker(myLatLng);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+        if (markers.length == 0) {
+          handler.getMap().setZoom(2);
+        } else if (markers.length == 1) {
+          handler.getMap().setZoom(14);
+        }
+      });
+    });
+  <% end %>
+<% end %>
 
 
 
 
 
-
-
-<a href="logo.png" class="swipebox" title="My Caption">
-<img src="images/log.png" alt="image">
-</a>
-
-<script type="text/javascript">
-$(function(){
-
-$( '#gallery' ).click( function( e ) {
-  e.preventDefault();
-  $.swipebox( [
-    { href:'big/image1.jpg', title:'My Caption' },
-    { href:'big/image2.jpg', title:'My Second Caption' }
-  ] );
-} );
-});
-</script>
 <script src="lib/jquery-2.0.3.js"></script>
-<script src="src/js/jquery.swipebox.js"></script>
+
 

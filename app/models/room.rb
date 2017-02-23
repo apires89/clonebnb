@@ -7,6 +7,7 @@ class Room < ApplicationRecord
 
   validates :name, :home_type, :room_type, :accomodate, :bedrooms, :bathrooms, :summary, :address, presence: true
   validates :summary, length: {maximum: 500}
+  validates :name, length: {maximum: 100}
 
   has_attachments :photos, maximum: 10
   geocoded_by :address
