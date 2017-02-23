@@ -1,0 +1,51 @@
+<% content_for(:after_js) do %>
+  <script>
+    var available_days = [];
+    <% @room.booking_slots.each do |s| %>
+      <% if s.booking == nil %>
+        available_days.push(new Date(<%= s.date.year %>, <%= s.date.month - 1 %>, <%= s.date.day %>));
+      <% end %>
+    <% end %>
+    function isSameDay(day1, day2){
+      return (day1.getFullYear() == day2.getFullYear() && day1.getMonth() == day2.getMonth() && day1.getDate() == day2.getDate())
+    }
+    $(document).ready(function(){
+      $('#booking-start-datepicker').datepicker({
+        dateFormat: "dd/mm/yy",
+        beforeShowDay: function(date) {
+          for(var i=0; i<available_days.length; i++) {
+            if(isSameDay(date, available_days[i])){
+              return [true, ''];
+            }
+          }
+          return [false, ''];
+        },
+        onSelect: function(date) {
+          $('#booking-end-datepicker').datepicker( "option", "minDate", date);
+        },
+        minDate: new Date()
+      });
+      $('#booking-end-datepicker').datepicker({
+        dateFormat: "dd/mm/yy",
+        beforeShowDay: function(date) {
+          for(var i=0; i<available_days.length; i++) {
+            if(isSameDay(date, available_days[i])){
+              return [true, ''];
+            }
+          }
+          return [false, ''];
+        },
+        minDate: new Date()
+      });
+    });
+
+  </script>
+<% end %>
+
+<h3>Book now</h3>
+<%= simple_form_for @booking , url: room_bookings_path(@room), :method => :post do |f| %>
+  <%= f.input :start_date, as: :string, input_html: { id: 'booking-start-datepicker' } %>
+  <%= f.input :end_date, as: :string, input_html: { id: 'booking-end-datepicker' } %>
+  <%= f.input :num_of_persons, collection: 1..@room.accomodate %>
+  <%= f.submit "Book", class: "btn btn-primary" %>
+<% end %>
