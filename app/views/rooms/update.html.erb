@@ -1,2 +1,32 @@
-<h1>Rooms#update</h1>
-<p>Find me in app/views/rooms/update.html.erb</p>
+<%# content deleted from index %>
+
+<div class="show container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Rooms</h1>
+
+  <div class="media">
+    <div class="media-body">
+      <div class="media-section">
+        <h2>Awesome homes near Disneyland</h2>
+      </div>
+      <div class="media-section">
+        <p>Here you can navigate on our staff favourite places</p>
+      </div>
+    </div>
+  </div>
+
+  <p>New <%= link_to "#new", rooms_path %></p>
+  <p> Edit <%= link_to "#edit", rooms_path %> </p>
+  <p> Show <%= link_to "#show", rooms_path %> </p>
+
+
+  <div class="form-inline padded">
+    <%= simple_form_for :search, url: rooms_path, method: :get, remote: true do |f| %>
+    <%= f.input :address, placeholder: 'What to put here?', label: false %>
+    <%= f.input :date, as: :date, label: false%>
+    <%= f.submit class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

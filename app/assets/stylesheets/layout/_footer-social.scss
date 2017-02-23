@@ -4,15 +4,15 @@
   height: 80px;
   width: 100%;
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
 .footer-social-links-container {
   border-top: 1px solid $soft-lines;
   margin: 0px 100px;
-  flex-grow: 1;
   padding: 20px 15px;
+  width: 100%;
 }
 
 .footer-social-links-container a {
