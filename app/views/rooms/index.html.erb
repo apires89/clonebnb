@@ -1,6 +1,11 @@
 <div class="results-wrapper">
   <div class="row results-row">
     <div class="col-xs-12 col-lg-6 results-container">
+    <div class="row cards-row">
+      <div class="col-log-6 results-found">
+        <p><%= @rooms.length %> results found!</p>
+      </div>
+    </div>
       <div class="row cards-row">
         <% @rooms.each do |room| %>
           <div class="col-lg-6 card-container">
@@ -14,17 +19,19 @@
     </div>
   </div>
 </div>
+<%= render 'shared/footer' %>
 
 
-<% content_for(:after_js) do %>
+
+<%= content_for(:after_js) do %>
 <script>
   $(document).ready(function() {
   var handler = Gmaps.build('Google');
   handler.buildMap({ internal: { id: 'map' } }, function() {
-      markers = handler.addMarker(<%= raw @hash.to_json %>);
+      markers = handler.addMarkers(<%= "#{raw(@hash)}" %>);
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
-      handler.getMap().setZoom(13);
+      handler.getMap().setZoom(3);
     });
   });
 </script>

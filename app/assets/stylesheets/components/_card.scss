@@ -21,5 +21,31 @@
 
 .card-details {
   margin-top: 25px;
-  line-height: 0.9;
+  line-height: 0.7;
+  ul {
+    margin-bottom: 0px;
+  }
+}
+
+.card-link:hover {
+  cursor: pointer;
+}
+
+.card-address {
+  margin-top: -20px;
+  p {
+  color: $darkgray;
+  }
+}
+
+.card-address:hover {
+  text-decoration: none;
+}
+
+.card-name {
+  color: $text;
+}
+
+.card-name:hover {
+  color: $text;
 }

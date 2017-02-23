@@ -4,15 +4,16 @@
   height: 80px;
   width: 100%;
   display: flex;
-  position: fixed;
+  position: absolute;
   bottom: 0;
+  background: white;
 }
 
 .footer-social-links-container {
   border-top: 1px solid $soft-lines;
-  margin: 0px 100px;
   padding: 20px 15px;
   width: 100%;
+  position: absolute;
 }
 
 .footer-social-links-container a {
@@ -20,4 +21,11 @@
   margin: 0px 15px 20px 15px;
   font-size: 25px;
   color: $gray-base;
+}
+
+#show-view-footer {
+  position: fixed;
+  .footer-social-links-container {
+    position: fixed;
+  }
 }
