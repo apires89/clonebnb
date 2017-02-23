@@ -28,7 +28,9 @@ before_action :set_room, only: [:show, :edit, :update]
     @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
       marker.lat flat.latitude
       marker.lng flat.longitude
+      marker.infowindow flat.booking_slots.first.day_price
     end
+    @hash.to_json
   end
 
   def create

@@ -1,12 +1,24 @@
-
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path room.photos.first.path, height: 300, width: 400, crop: :fill %>')">
-
-    <div class="card-category">
-      KNASS
-    </div>
-    <div class="card-description">
-      <h2>Acm: <%= room.accomodate %></h2>
-      <p>ADDR: <%= room.address %></p>
-    </div>
-    <%= link_to "#", room, class: "card-link" %>
+<%= link_to room_path(room.id), class: "card-link" do %>
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path room.photos.first.path, height: 300, width: 400, crop: :fill %>')">
   </div>
+<% end %>
+<div class="card-details">
+  <ul class="list-inline">
+    <li>
+      <p>
+        <strong>
+        <%= room.booking_slots.first.day_price.to_i %>$/night -
+          <%= link_to room_path(room.id, anchor: "overview"), class: "card-name" do %>
+            <%= room.name %>
+          <% end %>
+        </strong>
+      </p>
+    </li>
+    <li>
+      <%= render 'review-stars-for-room-card', :room => room  %>
+      </li>
+  </ul>
+  <%= link_to room_path(room.id, anchor:  "map"), class: "card-address" do %>
+    <p><%= room.address %></p>
+  <% end %>
+</div>
