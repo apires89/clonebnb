@@ -13,13 +13,14 @@ User.destroy_all
 10.times do |i|
   user = User.new({
     phone_number: Faker::PhoneNumber.cell_phone,
-    fullname: Faker::Name.name
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name
     })
   user.email = "test#{i}@example.com"
   user.password = 'password'
   user.password_confirmation = 'password'
   user.save!
-  user.avatar_url = Faker::Avatar.image
+  user.facebook_picture_url = Faker::Avatar.image
   user.save!
   if i.even?
     room = Room.new({
@@ -31,6 +32,7 @@ User.destroy_all
         bedrooms: (1..5).to_a.sample,
         accomodate: rand(5) + 1,
         summary: Faker::Lorem.paragraph(4, false, 4),
+        description: Faker::Lorem.sentence,
         has_tv: rand < 0.5,
         has_kitchen: rand < 0.5,
         has_aircon: rand < 0.5,

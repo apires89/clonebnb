@@ -36,11 +36,21 @@
   </div>
   <div class="col-md-9 justifed">
     <div class="col-md-6 justified">
-      <div class="fa fa-wifi display-icons-small text-center" id="has_wifi"><h6>Wi-Fi</h6></div>
-      <div class="fa fa-cutlery display-icons-small text-center" id="has_kitchen"><h6>Kitchen</h6></div>
-      <div class="fa fa-snowflake-o display-icons-small text-center" id="has_aircon"><h6>Air Conditioning</h6></div>
-      <div class="fa fa-sun-o display-icons-small text-center" id="has_heating"><h6>Heating</h6></div>
-      <div class="fa fa-television display-icons-small text-center" id="has_tv"><h6>TV</h6></div>
+      <% if @room.has_wifi %>
+        <div class="fa fa-wifi display-icons-small text-center" id="has_wifi"><h6>Wi-Fi</h6></div>
+      <% end %>
+      <% if @room.has_kitchen %>
+        <div class="fa fa-cutlery display-icons-small text-center" id="has_kitchen"><h6>Kitchen</h6></div>
+      <% end %>
+      <% if @room.has_aircon %>
+        <div class="fa fa-snowflake-o display-icons-small text-center" id="has_aircon"><h6>Air Conditioning</h6></div>
+      <% end %>
+      <% if @room.has_heating %>
+        <div class="fa fa-sun-o display-icons-small text-center" id="has_heating"><h6>Heating</h6></div>
+      <% end %>
+      <% if @room.has_tv %>
+        <div class="fa fa-television display-icons-small text-center" id="has_tv"><h6>TV</h6></div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -51,7 +61,7 @@
       <h6>Prices</h6>
     </div>
     <div class="col-md-9 justifed">
-      <p>per/day:<%= @room.price %>$</p>
+      <p>per/day:<strong><%= @room.booking_slots.first.day_price %>$</strong></p>
     </div>
 </div>
 
