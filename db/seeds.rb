@@ -19,8 +19,11 @@ User.destroy_all
   user.password = 'password'
   user.password_confirmation = 'password'
   user.save!
+  user.avatar_url = Faker::Avatar.image
+  user.save!
   if i.even?
     room = Room.new({
+        name: Faker::LordOfTheRings.location,
         home_type: ['apartment', 'real', 'mansion'].sample,
         room_type: ['double', 'single', 'whole apertment'].sample,
         address: Faker::Address.street_address,

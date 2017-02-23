@@ -1,4 +1,7 @@
 class Room < ApplicationRecord
+  attr_accessor :start_date
+  attr_accessor :end_date
+  attr_accessor :price
   belongs_to :user
   has_many :booking_slots, dependent: :destroy
 
