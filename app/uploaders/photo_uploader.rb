@@ -25,21 +25,21 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # Process files as they are uploaded:
   # process scale: [200, 300]
 
-  process eager: true  # Force version generation at upload time.
+  # process eager: true  # Force version generation at upload time.
 
-  process convert: 'jpg'
+  # process convert: 'jpg'
 
-  version :standard do
-    resize_to_fit 800, 600
-  end
+  # version :standard do
+  #   resize_to_fit 800, 600
+  # end
   #
   # def scale(width, height)
   #   # do something
   # end
-   version :bright_face do
-    cloudinary_transformation effect: "brightness:30", radius: 20,
-      width: 150, height: 150, crop: :thumb, gravity: :face
-  end
+  # version :bright_face do
+   # cloudinary_transformation effect: "brightness:30", radius: 20,
+    #  width: 150, height: 150, crop: :thumb, gravity: :face
+  #end
 
   # Create different versions of your uploaded files:
   # version :thumb do
