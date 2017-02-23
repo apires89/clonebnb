@@ -16,12 +16,20 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(bookings_params)
+    @room = Room.find(params[:room_id])
+
+    @booking = Booking.new(
+      start_date: datepicker_to_date(params[:booking][:start_date]),
+      end_date: datepicker_to_date(params[:booking][:end_date]),
+      num_of_persons: params[:booking][:num_of_persons]
+      )
+    @booking.room = @room
+    @booking.user = current_user
     if @booking.save
       flash[:notice] = "Reservation completed!"
       redirect_to root_path
     else
-      flash[:blocked] = "That Date is not available"
+      flash[:alert] = "That time period is not available"
       redirect_to :back
     end
   end
@@ -46,8 +54,8 @@ class BookingsController < ApplicationController
 
   private
 
-  def booking_params
-    params.require(:booking).permit(:user_id, :room_id, :start_date, :end_date)
-    #needs more?
+  def datepicker_to_date(datepicker_string)
+    datepicker_string.gsub('/','-')
   end
+
 end
