@@ -14,8 +14,8 @@ before_action :set_room, only: [:show, :edit, :update]
     @room = Room.find(params[:id])
     @alert_message = "You are viewing #{@room.name}"
     @photos = @room.photos
-    @reviews = @room.reviews
-    @hasReview = @reviews.find_by(user_id: current_user.id) if current_user
+    #@reviews = @room.reviews
+    #@hasReview = @reviews.find_by(user_id: current_user.id) if current_user
 
   end
 

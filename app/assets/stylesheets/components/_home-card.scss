@@ -1,6 +1,39 @@
 .summary-component {
-  margin-top: 24px;
+  padding-bottom: 24px;
+}
+
+.info-container {
+  margin-top: -20px;
+}
+
+.display-address {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.avatar-container {
+  margin-right: -20px;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+.display-name-address h3,h6,a {
+  line-height: 5px !important;
+  margin-top: 15px;
+}
+
+.display-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   margin-bottom: 24px;
 }
 
+.display-icons {
+  font-size: 50px;
+}
 
+.display-icons-small {
+  font-size: 30px;
+  padding: 10px 20px;
+}
