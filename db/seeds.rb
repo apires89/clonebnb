@@ -70,22 +70,12 @@ User.all.each do |user|
   room = Room.all.sample
   booking = Booking.new
   booking_slot = room.booking_slots.sample
-  days = rand(7)
+  days = rand(7) + 1
   date = booking_slot.date
-  booking.start_date = date.to_s(:db)
-  booking.end_date = (date + days).to_s(:db)
+  booking.start_date = date
+  booking.end_date = (date + days)
   booking.num_of_persons = rand(room.accomodate) + 1
   booking.user = user
-  is_free = (0..(days - 1)).to_a.all? do |i|
-    booking_slot = room.booking_slots.where('date = ?', (date + i).to_s(:db)).first
-    booking_slot && !booking_slot.booking
-  end
-  if is_free
-    booking.save!
-    (0..(days - 1)).to_a.each do |i|
-      booking_slot = room.booking_slots.where('date = ?', (date + i).to_s(:db)).first
-      booking_slot.booking = booking
-      booking_slot.save!
-    end
-  end
+  booking.room = room
+  booking.save
 end

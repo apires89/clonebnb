@@ -10,6 +10,7 @@ before_action :set_room, only: [:show, :edit, :update]
   end
 
   def show
+    @booking = Booking.new
     @room = Room.find(params[:id])
     @alert_message = "You are viewing #{@room.name}"
 
@@ -36,8 +37,8 @@ before_action :set_room, only: [:show, :edit, :update]
       render :new
       return
     end
-    day = Date.strptime(params[:room][:start_date].gsub('/','-'), '%d-%m-%Y')
-    end_date = Date.strptime(params[:room][:end_date].gsub('/','-'), '%d-%m-%Y')
+    day = datepicker_to_date(params[:room][:start_date])
+    end_date = datepicker_to_date(params[:room][:end_date])
     price = params[:room][:price]
     if @room.save && day < end_date
       if params[:images]
@@ -87,5 +88,9 @@ end
   :name, :home_type, :room_type, :accomodate,
   :bedrooms, :bathrooms, :summary, :address, :has_tv,
   :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, :photo_cache, :url, photos: [] )
+  end
+
+  def datepicker_to_date(datepicker_string)
+    Date.strptime(datepicker_string.gsub('/','-'), '%d-%m-%Y')
   end
 end
