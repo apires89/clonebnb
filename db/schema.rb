@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222195159) do
-
+ActiveRecord::Schema.define(version: 20170223141836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,10 +87,7 @@ ActiveRecord::Schema.define(version: 20170222195159) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "name"
-<<<<<<< HEAD
-=======
     t.text     "description"
->>>>>>> 5963b8c37a52060851890c5c5a21a860a3791f4e
     t.index ["user_id"], name: "index_rooms_on_user_id", using: :btree
   end
 
@@ -109,10 +105,6 @@ ActiveRecord::Schema.define(version: 20170222195159) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "phone_number"
-<<<<<<< HEAD
-    t.string   "fullname"
-=======
->>>>>>> 5963b8c37a52060851890c5c5a21a860a3791f4e
     t.text     "description"
     t.string   "provider"
     t.string   "uid"
