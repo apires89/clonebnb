@@ -1,0 +1,20 @@
+.star {
+  padding: 0 !important;
+  font-size: 12px;
+}
+
+.star-active {
+  color: $brand-primary;
+}
+
+#reviews-average:hover {
+  text-decoration: none;
+}
+
+#reviews-average {
+  color: $gray-base;
+}
+
+.title-margins {
+  margin-top: 70px;
+}

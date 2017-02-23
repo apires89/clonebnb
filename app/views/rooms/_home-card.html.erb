@@ -8,17 +8,41 @@
 </div>
 
 <div class="info-container padded">
-  <div class="col-md-3 text-center">
-    <div class="avatar-large" id="avatar">
-      <img class="avatar-large" id="navbar-wagon-menu" data-toggle="dropdown" src="https://graph.facebook.com/v2.6/1450935128273252/picture?type=square" alt="Picture?type=square">
-      <a href=""><h6>Guilherme</h6></a>
+  <div class="avatar-container col-md-3 text-center">
+    <div class="avatar-large">
+      <img class="avatar-large" id="navbar-wagon-menu"  src="<%= @room.user.facebook_picture_url%>" alt="Picture?type=square">
+      <a href=""><h6><%= @room.user.first_name %></h6></a>
     </div>
   </div>
   <div class="col-md-9">
-    <h3>Name of the Listing</h3>
-    <div class="display-address">
-      <a href="" class="address-link"><h6>  Address linking to map</h6></a>
-      <a href="" class="reviews-link">Average rating linking to reviews section</a>
+    <div class="display-name-address">
+      <h3><%= @room.name %></h3>
+      <div class="display-address list-inline">
+        <li>
+          <a href="" class="address-link"><h6><%= @room.address %></h6></a>
+        </li>
+        <li>
+          <%= render 'reviews-stars' %>
+        </li>
+    </div>
+    </div>
+    <div class="display-details list-inline text-center">
+        <li>
+          <div class="fa fa-building display-icons"></div>
+          <h6><%= @room.home_type.capitalize %></h6>
+        </li>
+        <li>
+          <div class="fa fa-users display-icons"></div>
+          <h6><%= @room.accomodate %> pax</h6>
+        </li>
+        <li>
+          <div class="fa fa-home display-icons"></div>
+          <h6><%= @room.room_type.capitalize %></h6>
+        </li>
+        <li>
+          <div class="fa fa-bed display-icons"></div>
+          <h6><%= @room.accomodate %>beds</h6>
+        </li>
     </div>
   </div>
 </div>

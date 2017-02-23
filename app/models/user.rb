@@ -8,7 +8,6 @@ class User < ApplicationRecord
 
     #validates :avatar, presence: true
 
-
   has_many :rooms, dependent: :destroy
   has_many :bookings, dependent: :destroy
 

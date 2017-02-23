@@ -1,0 +1,76 @@
+<div class="bordered row" data-react="overview">
+  <div class="col-lg-8">
+    <div class="margined">
+      <h3>About this property</h3>
+      <div>
+        <p><%= @room.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bordered row margined" >
+  <div class="col-md-3 justified">
+    <h6>The space</h6>
+  </div>
+  <div class="col-md-9 justified">
+    <div class="col-md-6">
+      <p>Accommodates: <strong><%= @room.accomodate %></strong></p>
+      <p>Bathrooms: <strong><%= @room.bathrooms %></strong></p>
+      <p>Bedrooms: <strong><%= @room.bedrooms %></strong></p>
+      <p>Beds: <strong><%= @room.accomodate %></strong></p>
+    </div>
+    <div class="col-md-6">
+      <p>Check In: <strong>1PM</strong></p>
+      <p>Check Out: <strong>11AM</strong></p>
+      <p>Property type: <strong><%= @room.home_type %></strong></p>
+      <p>Room type: <strong><%= @room.room_type %></strong></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="bordered row margined " >
+  <div class="col-md-3 justified">
+    <h6>Amenities</h6>
+  </div>
+  <div class="col-md-9 justifed">
+    <div class="col-md-6 justified">
+      <% if @room.has_wifi %>
+        <div class="fa fa-wifi display-icons-small text-center" id="has_wifi"><h6>Wi-Fi</h6></div>
+      <% end %>
+      <% if @room.has_kitchen %>
+        <div class="fa fa-cutlery display-icons-small text-center" id="has_kitchen"><h6>Kitchen</h6></div>
+      <% end %>
+      <% if @room.has_aircon %>
+        <div class="fa fa-snowflake-o display-icons-small text-center" id="has_aircon"><h6>Air Conditioning</h6></div>
+      <% end %>
+      <% if @room.has_heating %>
+        <div class="fa fa-sun-o display-icons-small text-center" id="has_heating"><h6>Heating</h6></div>
+      <% end %>
+      <% if @room.has_tv %>
+        <div class="fa fa-television display-icons-small text-center" id="has_tv"><h6>TV</h6></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class="bordered row margined " >
+    <div class="col-md-3 justified">
+      <h6>Prices</h6>
+    </div>
+    <div class="col-md-9 justifed">
+      <p>per/day:<strong><%= @room.booking_slots.first.day_price %>$</strong></p>
+    </div>
+</div>
+
+
+<div class="row margined " >
+    <div class="col-md-3 justified">
+      <h6>Description</h6>
+    </div>
+    <div class="col-md-9 justifed">
+      <p><%= @room.summary %></p>
+    </div>
+</div>

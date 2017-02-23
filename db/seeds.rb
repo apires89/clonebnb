@@ -9,18 +9,23 @@ Booking.destroy_all
 BookingSlot.destroy_all
 Room.destroy_all
 User.destroy_all
+Review.destroy_all
 
 10.times do |i|
   user = User.new({
     phone_number: Faker::PhoneNumber.cell_phone,
-    fullname: Faker::Name.name
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name
     })
   user.email = "test#{i}@example.com"
   user.password = 'password'
   user.password_confirmation = 'password'
   user.save!
+  user.facebook_picture_url = Faker::Avatar.image
+  user.save!
   if i.even?
     room = Room.new({
+        name: Faker::LordOfTheRings.location,
         home_type: ['apartment', 'real', 'mansion'].sample,
         room_type: ['double', 'single', 'whole apertment'].sample,
         address: Faker::Address.street_address,
@@ -28,6 +33,7 @@ User.destroy_all
         bedrooms: (1..5).to_a.sample,
         accomodate: rand(5) + 1,
         summary: Faker::Lorem.paragraph(4, false, 4),
+        description: Faker::Lorem.sentence,
         has_tv: rand < 0.5,
         has_kitchen: rand < 0.5,
         has_aircon: rand < 0.5,
@@ -61,26 +67,30 @@ User.destroy_all
   end
 end
 
+Room.all.each do |room|
+  10.times do  |i|
+    review = Review.new({
+      star: rand(1..5),
+      description: Faker::Lorem.paragraph(4, false, 4),
+    })
+    review.user = User.all.sample
+    review.room = room
+    review.save!
+  end
+end
+
 User.all.each do |user|
   room = Room.all.sample
   booking = Booking.new
   booking_slot = room.booking_slots.sample
-  days = rand(7)
+  days = rand(7) + 1
   date = booking_slot.date
-  booking.start_date = date.to_s(:db)
-  booking.end_date = (date + days).to_s(:db)
+  booking.start_date = date
+  booking.end_date = (date + days)
   booking.num_of_persons = rand(room.accomodate) + 1
   booking.user = user
-  is_free = (0..(days - 1)).to_a.all? do |i|
-    booking_slot = room.booking_slots.where('date = ?', (date + i).to_s(:db)).first
-    booking_slot && !booking_slot.booking
-  end
-  if is_free
-    booking.save!
-    (0..(days - 1)).to_a.each do |i|
-      booking_slot = room.booking_slots.where('date = ?', (date + i).to_s(:db)).first
-      booking_slot.booking = booking
-      booking_slot.save!
-    end
-  end
+  booking.room = room
+  booking.save
 end
+
+
