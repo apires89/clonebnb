@@ -1,12 +1,26 @@
-.banner {
-  background-color: $gray;
+.show-banner {
+  position: relative;
   text-align: center;
-  height: calc(50vh - 70px);
+  height: calc(70vh - 70px);
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
   display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
 }
 
+.banner {
+  text-align: center;
+  object-fit: cover;
+  align-self: center;
+  width: 100%;
+  display: none;
+  &:first-child {
+    display: block;
+  }
+}
+
+.swipebox-banner img {
+  background-size: cover;
+  width: 100%;
+}

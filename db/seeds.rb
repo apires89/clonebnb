@@ -9,6 +9,7 @@ Booking.destroy_all
 BookingSlot.destroy_all
 Room.destroy_all
 User.destroy_all
+Review.destroy_all
 
 10.times do |i|
   user = User.new({
@@ -66,6 +67,18 @@ User.destroy_all
   end
 end
 
+Room.all.each do |room|
+  10.times do  |i|
+    review = Review.new({
+      star: rand(1..5),
+      description: Faker::Lorem.paragraph(4, false, 4),
+    })
+    review.user = User.all.sample
+    review.room = room
+    review.save!
+  end
+end
+
 User.all.each do |user|
   room = Room.all.sample
   booking = Booking.new
@@ -79,3 +92,5 @@ User.all.each do |user|
   booking.room = room
   booking.save
 end
+
+

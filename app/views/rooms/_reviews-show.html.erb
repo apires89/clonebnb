@@ -1,0 +1,26 @@
+
+
+<div class="bordered row">
+  <div class="col-lg-8">
+    <div class="title-margins">
+      <strong><%= render 'reviews-stars' %></strong>
+    </div>
+  </div>
+</div>
+
+
+<% @room.reviews.each do |review| %>
+<div class="row margined bordered">
+  <div class="avatar-container col-md-3 text-center">
+    <div class="avatar-large">
+      <img class="avatar-large" id="navbar-wagon-menu"  src="<%= review.user.facebook_picture_url %>" alt="Picture?type=square">
+      <a href=""><h6><%= review.user.first_name %></h6></a>
+    </div>
+  </div>
+    <div class="col-md-9 justifed padded">
+      <p><%= review.description %></p>
+      <p><%= render 'review-stars-for-review-card', :review => review %></p>
+    </div>
+</div>
+<% end %>
+

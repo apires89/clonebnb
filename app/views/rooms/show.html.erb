@@ -1,56 +1,100 @@
 
-<div class="show-banner banner">
-
+<div class="show-banner">
+<% cl_img = "http://res.cloudinary.com/dod0sl861/image/upload/" %>
+<% @room.photos.each do |p| %>
+<a href="<%= "#{cl_img}#{p.path}" %>" data-lightbox="pics" class="banner">
+      <%= cl_image_tag p.path, alt: "image" %>
+      </a>
+<% end %>
+    <%# end %>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8">
-      <div class="bordered row hide-md text-center">
-        <%= render 'tabs'  %>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <%= render 'home-card' %>
+  <div class="wrapper" id="getFixed">
+    <div class="container">
+      <div class="row" >
+        <div class="col-lg-8">
+          <div class="bordered row hide-md text-center">
+            <%= render 'tabs'  %>
+          </div>
+          <div class="col-lg-4">
+
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-lg-4 column">
-       <%= render 'booking-form'  %>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-sm-12">
+            <%= render 'home-card' %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 column">
+         <%= render 'booking-form'  %>
+      </div>
     </div>
   </div>
-</div>
-<div class="full-width-border"></div>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8">
-        <%= render 'listing-details' %>
+  <div class="full-width-border"></div>
+  <div class="container">
+    <div class="row" id="overview">
+      <div class="col-lg-8">
+          <%= render 'listing-details' %>
+      </div>
+    </div>
+  </div>
+  <div class="full-width-border"></div>
+  <div class="container">
+    <div class="row" id="reviews">
+      <div class="col-lg-8">
+          <%= render 'reviews-show' %>
+      </div>
     </div>
 
   </div>
-</div>
+
+
+
 
 <div id="map" style="width: 100%; height: 400px;"></div>
 
 <% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      var myLatLng = {lat: <%= @room.latitude.to_f %>, lng: <%= @room.longitude.to_f %>};
-      var handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function() {
-        markers = handler.addMarker(myLatLng);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-        handler.getMap().setZoom(13);
-      });
+<script>
+  $(document).ready(function() {
+    var myLatLng = {lat: <%= @room.latitude.to_f %>, lng: <%= @room.longitude.to_f %>};
+    var handler = Gmaps.build('Google');
+    handler.buildMap({ internal: { id: 'map' } }, function() {
+      markers = handler.addMarker(myLatLng);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+      handler.getMap().setZoom(13);
     });
+  });
+  jQuery(function($) {
+  function fixDiv() {
+    var $cache = $('#getFixed');
+    if ($(window).scrollTop() > 700)
+      $cache.css({
+        'position': 'fixed',
+        'top': '0',
+        'background-color': 'white',
+        'z-index': '1',
+        'width': '100%'
+      });
+    else
+      $cache.css({
+        'position': 'relative',
+        'top': 'auto'
+      });
+  }
+    $(window).scroll(fixDiv);
+    fixDiv();
+  });
+</script>
   <% end %>
-<% end %>
 
 
-
-
-
-<script src="lib/jquery-2.0.3.js"></script>
 
 
