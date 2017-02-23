@@ -3,7 +3,7 @@
     <div class="margined">
       <h3>About this property</h3>
       <div>
-        <p>Cool apartment</p>
+        <p><%= @room.description %></p>
       </div>
     </div>
   </div>
@@ -66,7 +66,7 @@
 </div>
 
 
-<div class="bordered row margined " >
+<div class="row margined " >
     <div class="col-md-3 justified">
       <h6>Description</h6>
     </div>
@@ -74,43 +74,3 @@
       <p><%= @room.summary %></p>
     </div>
 </div>
-
-<% if @room.has_heating == false %>
-  <script>
-  $(document).ready(function() {
-      $('#has_heating').addClass('hidden');
-   });
-  </script>
-<% end %>
-
-<% if @room.has_tv == false %>
-  <script>
-  $(document).ready(function() {
-      $('#has_tv').addClass('hidden');
-   });
-  </script>
-<% end %>
-
-<% if @room.has_aircon == false %>
-  <script>
-  $(document).ready(function() {
-      $('#has_aircon').addClass('hidden');
-   });
-  </script>
-<% end %>
-
-<% if @room.has_kitchen == false %>
-  <script>
-  $(document).ready(function() {
-      $('#has_kitchen').addClass('hidden');
-   });
-  </script>
-<% end %>
-
-<% if @room.has_wifi == false %>
-  <script>
-  $(document).ready(function() {
-      $('#has_wifi').addClass('hidden');
-   });
-  </script>
-<% end %>

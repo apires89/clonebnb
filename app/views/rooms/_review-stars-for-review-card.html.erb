@@ -1,0 +1,27 @@
+<ul class="list-inline">
+  <li><p><strong><%= review.created_at.strftime("%B %d, %Y") %></strong></p></li>
+  <li>
+    <ul class="list-inline">
+      <% review.star.times do %>
+      <li class="fa fa-star star star-active"></li>
+      <% end %>
+      <% (5 - review.star.round).times do %>
+      <li class="fa fa-star star"></li>
+      <% end %>
+      <% case review.star %>
+        <% when 1 %>
+        <li>Poor</li>
+        <% when 2 %>
+        <li>Below Average</li>
+        <% when 3 %>
+        <li>Average</li>
+        <% when 4 %>
+        <li>Good</li>
+        <% when 5 %>
+        <li>Excellent</li>
+      <% end %>
+    </ul>
+  </li>
+</ul>
+
+

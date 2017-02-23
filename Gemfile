@@ -30,6 +30,7 @@ gem 'autoprefixer-rails'
 gem 'faker'
 gem 'omniauth-facebook'
 gem 'jquery-ui-rails'
+gem 'lightbox2-rails'
 
 group :development, :test do
   gem 'binding_of_caller'

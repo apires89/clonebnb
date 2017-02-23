@@ -67,7 +67,6 @@ ActiveRecord::Schema.define(version: 20170223110826) do
     t.string   "home_type"
     t.string   "room_type"
     t.string   "address"
-    t.integer  "price"
     t.integer  "bedrooms"
     t.integer  "accomodate"
     t.text     "summary"
@@ -83,9 +82,9 @@ ActiveRecord::Schema.define(version: 20170223110826) do
     t.boolean  "activate"
     t.string   "photo"
     t.string   "url"
-    t.string   "name"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "name"
     t.text     "description"
     t.index ["user_id"], name: "index_rooms_on_user_id", using: :btree
   end
@@ -104,7 +103,6 @@ ActiveRecord::Schema.define(version: 20170223110826) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "phone_number"
-    t.string   "fullname"
     t.text     "description"
     t.string   "provider"
     t.string   "uid"

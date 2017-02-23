@@ -8,13 +8,13 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "jquery-ui";
+@import 'lightbox';
 
 // Your CSS
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
 @import "vendor/index";
-
 
 h1, h2, h3, p {
   font-family: $base-font;
