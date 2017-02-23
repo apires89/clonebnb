@@ -1,4 +1,5 @@
 class Room < ApplicationRecord
+  searchkick
   belongs_to :user
   has_many :booking_slots, dependent: :destroy
 
