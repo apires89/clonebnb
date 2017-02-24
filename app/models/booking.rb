@@ -4,6 +4,7 @@ class Booking < ApplicationRecord
   has_many :booking_slots, dependent: :nullify
   validates :user, :room, :start_date, :end_date, :num_of_persons, presence: true
   validate :check_if_slots_available
+  before_save :calc_price
   after_save :book_slots
 
   private
@@ -20,14 +21,20 @@ class Booking < ApplicationRecord
     end
   end
 
-  def book_slots
+  def calc_price
     price = 0
+    (start_date...end_date).to_a.each do |i|
+      booking_slot = room.booking_slots.where('date = ?', i.to_s(:db)).first
+      price += booking_slot.day_price
+    end
+    self.price = price
+  end
+
+  def book_slots
     (start_date...end_date).to_a.each do |i|
       booking_slot = room.booking_slots.where('date = ?', i.to_s(:db)).first
       booking_slot.booking = self
       booking_slot.save!
-      price += booking_slot.day_price
     end
-    self.price = price
   end
 end
