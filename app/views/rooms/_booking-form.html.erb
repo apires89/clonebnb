@@ -1,3 +1,16 @@
+<div class="booking-form-container" id="booking-form">
+  <div class="booking-price-display">
+    <h6><strong><%= @room.booking_slots.first.day_price.to_i %>$ per Night</strong></h6>
+  </div>
+  <div class="booking-form">
+    <%= simple_form_for @booking , url: room_bookings_path(@room), :method => :post do |f| %>
+      <%= f.input :start_date, as: :string, input_html: { id: 'booking-start-datepicker' }, class: "booking-form-input" %>
+      <%= f.input :end_date, as: :string, input_html: { id: 'booking-end-datepicker' }, class: "booking-form-input" %>
+      <%= f.input :num_of_persons, collection: 1..@room.accomodate, class: "booking-form-input" %>
+      <%= f.submit "Book", class: "btn btn-primary", id: "book-btn" %>
+    <% end %>
+  </div>
+</div>
 <% content_for(:after_js) do %>
   <script>
     var available_days = [];
@@ -40,12 +53,4 @@
     });
 
   </script>
-<% end %>
-
-<h3>Book now</h3>
-<%= simple_form_for @booking , url: room_bookings_path(@room), :method => :post do |f| %>
-  <%= f.input :start_date, as: :string, input_html: { id: 'booking-start-datepicker' } %>
-  <%= f.input :end_date, as: :string, input_html: { id: 'booking-end-datepicker' } %>
-  <%= f.input :num_of_persons, collection: 1..@room.accomodate %>
-  <%= f.submit "Book", class: "btn btn-primary" %>
 <% end %>
