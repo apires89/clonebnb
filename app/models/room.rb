@@ -1,6 +1,4 @@
 class Room < ApplicationRecord
-
-  searchkick
   attr_accessor :start_date
   attr_accessor :end_date
   attr_accessor :price
