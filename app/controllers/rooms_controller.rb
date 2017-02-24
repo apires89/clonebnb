@@ -25,12 +25,11 @@ before_action :set_room, only: [:show, :edit, :update]
   def index
     @rooms = current_user.rooms
     @rooms = Room.where.not(latitude: nil, longitude: nil)
-    @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
+    @hash = Gmaps4rails.build_markers(@rooms) do |flat, marker|
       marker.lat flat.latitude
       marker.lng flat.longitude
-      marker.infowindow flat.booking_slots.first.day_price
+      marker.title flat.booking_slots.first.day_price
     end
-    @hash.to_json
   end
 
   def create
