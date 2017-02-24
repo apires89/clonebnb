@@ -15,7 +15,7 @@
       </p>
     </li>
     <li>
-      <%= render 'review-stars-for-room-card', :room => room  %>
+      <%= render 'rooms/review-stars-for-room-card', :room => room  %>
       </li>
   </ul>
   <%= link_to room_path(room.id, anchor:  "map"), class: "card-address" do %>

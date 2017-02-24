@@ -1,6 +1,5 @@
 class RoomsController < ApplicationController
-before_action :set_room, only: [:show, :edit, :update]
-
+  before_action :set_room, only: [:show, :edit, :update]
 # User must be authneticated before every controller action, except for show
   before_action :authenticate_user!, except: [:show]
 
@@ -18,8 +17,22 @@ before_action :set_room, only: [:show, :edit, :update]
 
     @reviews = @room.reviews
     @hasReview = @reviews.find_by(user_id: current_user.id) if current_user
+  end
 
+  def search
+    if Room.near(params[:address], 1000).empty?
+      notice
+      redirect_to rooms_path, alert: "No results found! Please search again."
+    else
+      @rooms = Room.near(params[:address], 500)
+      flash[:notice] =  "#{@rooms.length} results found!"
 
+    end
+    @hash = Gmaps4rails.build_markers(@rooms) do |flat, marker|
+      marker.lat flat.latitude
+      marker.lng flat.longitude
+      marker.infowindow flat.name
+    end
   end
 
   def index
@@ -28,7 +41,7 @@ before_action :set_room, only: [:show, :edit, :update]
     @hash = Gmaps4rails.build_markers(@rooms) do |flat, marker|
       marker.lat flat.latitude
       marker.lng flat.longitude
-      marker.title flat.booking_slots.first.day_price
+      marker.infowindow flat.name
     end
   end
 
