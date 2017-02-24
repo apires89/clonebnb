@@ -5,7 +5,7 @@ class RoomsController < ApplicationController
 
 
   def new
-    @room = current_user.rooms.build
+    @room = Room.new
   end
 
   def show
@@ -46,15 +46,16 @@ class RoomsController < ApplicationController
   end
 
   def create
+    raise
     @room = current_user.rooms.build(room_params)
     if params[:room][:start_date].length == 0 || params[:room][:end_date].length == 0
-      render :new
+      render :new, alert: "Insert dates."
       return
     end
     day = datepicker_to_date(params[:room][:start_date])
     end_date = datepicker_to_date(params[:room][:end_date])
     if day < end_date
-      render :new
+      render :new, alert: "Choose correct dates."
       return
     end
     price = params[:room][:price]
@@ -73,7 +74,7 @@ class RoomsController < ApplicationController
       end
       redirect_to user_profile_path, notice: "Saved Room."
     else
-      render :new
+      render :new, alert: "Room not saved."
     end
   end
 

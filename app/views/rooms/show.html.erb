@@ -1,5 +1,5 @@
 
-<div class="show-banner">
+<div class="show-banner" id="show-photos">
 <% cl_img = "http://res.cloudinary.com/dod0sl861/image/upload/" %>
 <% @room.photos.each do |p| %>
 <a href="<%= "#{cl_img}#{p.path}" %>" data-lightbox="pics" class="banner">

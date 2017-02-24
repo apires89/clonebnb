@@ -20,6 +20,6 @@
   <%= f.input :end_date, as: :string, input_html: { class: 'datepicker' } %>
   <%= f.input :price, as: :integer, input_html: { min: '0'} %>
   <%= f.input :photos, as: :attachinary %>
-  <%= f.submit "Save", class: "btn btn-primary" %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
 </div>
