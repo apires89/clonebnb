@@ -4,7 +4,7 @@
     <p>Select the room you want to rent</p>
     <div class="home-search">
       <%= simple_form_for :search, url: rooms_path, method: :get, html: {class: "form-inline"} do |f| %>
-        <%= f.input :city, placeholder: 'City ?', label: false,input_html: {class: "form-control input-lg"} %>
+        <%= text_field :city, placeholder: 'City ?', label: false,input_html: {type: "search"class: "form-control input-lg"} %>
         <%= f.input :date, as: :date, label: false,input_html: {class: "form-control input-lg"} %>
         <p class="home_button"><%= f.button :submit, input_html: {class: "btn btn-home-search btn-lg"}%></p>
       <% end %>
