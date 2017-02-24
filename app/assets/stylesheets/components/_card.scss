@@ -1,5 +1,5 @@
 .cards-row {
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
   flex-wrap: wrap;
 }
@@ -7,6 +7,7 @@
 .card-container {
   margin-top: 10px;
   margin-bottom: 10px;
+  min-width: 348px;
 }
 
 .card {
@@ -15,7 +16,7 @@
   position: relative;
   top: 10px;
   margin-bottom:10px;
-  min-width: 300px;
+  min-width: 348px;
   align-self: center;
 }
 
@@ -25,6 +26,10 @@
   ul {
     margin-bottom: 0px;
   }
+}
+
+.card-link {
+  min-width: 348px;
 }
 
 .card-link:hover {

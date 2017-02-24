@@ -7,12 +7,10 @@
     <% end %>
   </div>
     <!-- Search form -->
-      <form action="/s/" class="navbar-wagon-search">
-        <input type="text" class="navbar-wagon-search-input" placeholder="Search">
-        <button type="submit" class="navbar-wagon-search-btn">
-        </button>
-      </form>
-
+      <form action="/s" method="get" class="navbar-wagon-search">
+          <input type="search" class="navbar-wagon-search-input" name="address" id="address" class="form-control search-row" placeholder="Where are we going?" />
+          <button class="btn hidden" type="submit"></button>
+    </form>
 
 
 
@@ -92,3 +90,25 @@
     </div>
   </div>
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
+<script>
+  (function() {
+    var placesAutocomplete = places({
+      container: document.querySelector('#address')
+    });
+
+    var $address = document.querySelector('#address-value')
+    placesAutocomplete.on('change', function(e) {
+      $address.textContent = e.suggestion.value
+    });
+
+    placesAutocomplete.on('clear', function() {
+      $address.textContent = 'none';
+    });
+
+  })();
+</script>
+
+

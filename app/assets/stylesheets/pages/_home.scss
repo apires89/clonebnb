@@ -3,10 +3,26 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
 
-.home-search {
-
+.home-container {
+  height: calc(100vh - 150px);
 }
 
-.btn-home-search {
+.flex-content {
+  margin-top: 150px;
+}
 
+.flex-content {
+  flex-wrap: wrap;
+}
+
+
+#home-search-button {
+  width: 200px !important;
+  padding: 6px;
+}
+
+.search-row {
+  display: flex;
+  flex-grow: 1;
+  width: 800px;
 }

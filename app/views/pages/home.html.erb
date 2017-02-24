@@ -1,53 +1,53 @@
-<div class="banner">
-  <div class="banner-content">
-    <h1>Welcome Home</h1>
-    <p>Select the room you want to rent</p>
-    <div class="home-search">
-      <%= simple_form_for :search, url: rooms_path, method: :get, html: {class: "form-inline"} do |f| %>
-        <%= text_field :city, placeholder: 'City ?', label: false,input_html: {type: "search"class: "form-control input-lg"} %>
-        <%= f.input :date, as: :date, label: false,input_html: {class: "form-control input-lg"} %>
-        <p class="home_button"><%= f.button :submit, input_html: {class: "btn btn-home-search btn-lg"}%></p>
-      <% end %>
+<div class="container home-container">
+  <div class="row home-title-row">
+    <ul class="list-inline flex-content">
+      <li><h1>Going on a trip?</h1></li>
+      <li><h2>Book unique places and</h2></li>
+      <h2>experience cities like a local.</h2>
+    </ul>
+  </div>
+  <div class="row search-row">
+    <form action="/s" method="get">
+      <ul class="list-inline search-row">
+        <li>
+          <input type="search" name="address" id="city" class="form-control search-row" placeholder="Where are we going?" />
+        </li>
+        <li>
+          <button class="btn btn-primary" id="home-search-button" type="submit">Search Rooms</button>
+        </li>
+      </ul>
+    </form><hr>
+  </div>
+  <div class="row">
+    <div class="row cards-row">
+      <% @rooms[0..2].each do |room| %>
+        <div class="col-lg-4 card-container">
+          <%= render 'rooms/room_card', :room => room %>
+        </div>
+      <% end  %>
     </div>
   </div>
 </div>
 
-<div class="text-center padded features">
-  <div class="container">
-    <div class="row">
-      <h1 class="text-center">Enjoy your stay</h1>
-      <p>Be unique and rent the trendiest place</p>
-      <br>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <i class="fa fa-wheelchair-alt fa-3x" aria-hidden="true"></i>
-        <h2>Single Rooms</h2>
-        <p>The world is your new home.</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
-        <h2>Suites</h2>
-        <p>Comfort</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <i class="fa fa-user-plus fa-3x" aria-hidden="true"></i>
-        <h2>Bunkbeds</h2>
-        <p>Discover a new culture and lifestyle.</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 ">
-        <i class="fa fa-users fa-3x" aria-hidden="true"></i>
-        <h2>KNAASSSSASSS</h2>
-        <p>Join a community you will love.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="wrapper-grey padded">
-  <div class="container">
-    <div class="row">
-      <h1 class='text-center'>Discover the Clonebnb selection </h1>
-      <p> RENDER CARDS </p>
+<script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
+<script>
+  (function() {
+    var placesAutocomplete = places({
+      container: document.querySelector('#city')
+    });
 
-    </div>
-  </div>
-</div>
+    var $city = document.querySelector('#city-value')
+    placesAutocomplete.on('change', function(e) {
+      $city.textContent = e.suggestion.value
+    });
+
+    placesAutocomplete.on('clear', function() {
+      $city.textContent = 'none';
+    });
+
+  })();
+</script>
+
+
+
