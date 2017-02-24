@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 mount Attachinary::Engine => "/attachinary"
-
+  get '/user/profile',  to: 'users#show', as: 'user_profile'
   resources :rooms do
     resources :bookings, only: [ :new, :create ]
   end

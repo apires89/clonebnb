@@ -10,8 +10,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @review = Review.new
+    @user = current_user
+    @rooms = @user.rooms
+    @bookings = @user.bookings
   end
 
 

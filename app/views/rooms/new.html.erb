@@ -1,3 +1,5 @@
+<div style="width: 70%; margin: 0 auto;">
+<h1>New Room</h1>
 <%= simple_form_for @room do |f| %>
   <%= f.input :name %>
   <%= f.input :home_type %>
@@ -6,6 +8,7 @@
   <%= f.input :bedrooms, as: :integer, input_html: { min: '0'}%>
   <%= f.input :bathrooms, as: :integer, input_html: { min: '0'}%>
   <%= f.input :summary, as: :text %>
+  <%= f.input :description, as: :text %>
   <%= f.input :address %>
   <%= f.input :has_tv %>
   <%= f.input :has_wifi %>
@@ -19,3 +22,4 @@
   <%= f.input :photos, as: :attachinary %>
   <%= f.submit "Save", class: "btn btn-primary" %>
 <% end %>
+</div>

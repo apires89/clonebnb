@@ -41,6 +41,10 @@ before_action :set_room, only: [:show, :edit, :update]
     end
     day = datepicker_to_date(params[:room][:start_date])
     end_date = datepicker_to_date(params[:room][:end_date])
+    if day < end_date
+      render :new
+      return
+    end
     price = params[:room][:price]
     if @room.save && day < end_date
       if params[:images]
@@ -55,7 +59,7 @@ before_action :set_room, only: [:show, :edit, :update]
         slot.save!
         day = day + 1
       end
-      redirect_to edit_room_path (@room), notice: "Saved Room Picture."
+      redirect_to user_profile_path, notice: "Saved Room."
     else
       render :new
     end
@@ -68,7 +72,7 @@ before_action :set_room, only: [:show, :edit, :update]
           @room.photo.create(image: image)
         end
       end
-      redirect_to edit_room_path(@room), notice: "Room updated successfully."
+      redirect_to user_profile_path, notice: "Room updated successfully."
   end
 end
   def edit
@@ -87,7 +91,7 @@ end
 
   def room_params
   params.require(:room).permit(
-  :name, :home_type, :room_type, :accomodate,
+  :name, :home_type, :room_type, :accomodate, :description,
   :bedrooms, :bathrooms, :summary, :address, :has_tv,
   :has_wifi, :has_kitchen, :has_heating, :has_aircon, :price, :activate, :photo_cache, :url, photos: [] )
   end
