@@ -10,34 +10,24 @@
 </div>
 
   <div class="wrapper" id="getFixed">
-    <div class="container">
+    <div class="container" id="tabs-booking-container">
       <div class="row" >
         <div class="col-lg-8">
-          <div class="bordered row hide-md text-center">
-            <%= render 'tabs'  %>
-          </div>
-          <div class="col-lg-4">
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="row">
-          <div class="col-sm-12">
-            <%= render 'home-card' %>
+          <div class="row hide-md" id="tabs-booking-row">
+            <div class="row bordered">
+              <%= render 'tabs'  %>
+            </div>
+            <div class="row bordered">
+              <%= render 'home-card' %>
+            </div>
           </div>
         </div>
+        <div class="col-lg-4 column">
+          <%= render 'booking-form'  %>
+        </div>
       </div>
-      <div class="col-lg-4 column">
-         <%= render 'booking-form'  %>
-      </div>
-    </div>
   </div>
-  <div class="full-width-border"></div>
+</div>
   <div class="container">
     <div class="row" id="overview">
       <div class="col-lg-8">
@@ -88,9 +78,9 @@
         'position': 'relative',
         'top': 'auto'
       });
-  }
-    $(window).scroll(fixDiv);
-    fixDiv();
+    }
+      $(window).scroll(fixDiv);
+      fixDiv();
   });
 </script>
   <% end %>

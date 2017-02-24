@@ -6,6 +6,6 @@
     <% (5 - room.reviews.average(:star).to_i.round).times do %>
     <li class="fa fa-star star"></li>
     <% end %>
-    <li><p>(<%= room.reviews.count %>) Reviews</p></li>
+    <li><p class="review-count">(<%= room.reviews.count %>) Reviews</p></li>
   </ul>
 <% end %>

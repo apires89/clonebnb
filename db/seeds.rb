@@ -11,7 +11,7 @@ Room.destroy_all
 User.destroy_all
 Review.destroy_all
 
-10.times do |i|
+30.times do |i|
   user = User.new({
     phone_number: Faker::PhoneNumber.cell_phone,
     first_name: Faker::Name.first_name,
@@ -68,7 +68,7 @@ Review.destroy_all
 end
 
 Room.all.each do |room|
-  10.times do  |i|
+  rand(5..30).times do  |i|
     review = Review.new({
       star: rand(1..5),
       description: Faker::Lorem.paragraph(4, false, 4),
