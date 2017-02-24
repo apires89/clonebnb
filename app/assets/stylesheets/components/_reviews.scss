@@ -12,9 +12,35 @@
 }
 
 #reviews-average {
-  color: $gray-base;
+  color: $soft-lines;
 }
 
 .title-margins {
   margin-top: 70px;
 }
+
+.review-count {
+  font-size: 9px;
+}
+
+#tabs-booking-row {
+  background: transparent;
+  overflow: visible;
+  height: 60px;
+  z-index: 0;
+  flex-wrap: wrap;
+}
+
+#tabs-booking-container {
+  height: 58px;
+  background: transparent;
+}
+
+#getFixed {
+  background: transparent;
+}
+
+#overview-container {
+  z-index: 1;
+}
+

@@ -4,8 +4,8 @@
 //= require bootstrap-sprockets
 //= require jquery-fileupload/basic
 //= require cloudinary/jquery.cloudinary
+//= require gmaps/google
 //= require attachinary
 //= require lightbox
 //= require underscore
-//= require gmaps/google
 //= require_tree .

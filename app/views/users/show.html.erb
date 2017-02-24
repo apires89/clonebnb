@@ -1,2 +1,59 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div style="width: 70%; margin: 0 auto;">
+  <h1>Profile</h1>
+  <div class="bordered margined">
+    <h3><%= @user.first_name + " " + @user.last_name%></h3>
+    <p><%= @user.email %></p>
+    <p><%= @user.phone_number %></p>
+  </div>
+  <div class="bordered margined">
+    <%= link_to new_room_path, class: "btn btn-primary" do %>
+      <h6>New Room</h6>
+    <% end %>
+  </div>
+  <% if @bookings.length > 0 %>
+  <h2>Bookings</h2>
+  <% end %>
+  <% @bookings.each do |booking| %>
+  <div class="bordered row margined" >
+    <div class="col-md-3 justified">
+    <h6><%= booking.room.name %></h6>
+    </div>
+    <div class="col-md-9 justified">
+      <div class="col-md-6">
+        <p>Start Date: <strong><%= booking.start_date %></strong></p>
+        <p>End Date: <strong><%= booking.end_date %></strong></p>
+        <p>Price: <strong><%= booking.price %></strong></p>
+        <p>People: <strong><%= booking.num_of_persons %></strong></p>
+      </div>
+      <div class="col-md-6">
+        <%= cl_image_tag booking.room.photos.first.path, width: 200, height: 200, crop: :fill %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% if @rooms.length > 0 %>
+  <h2>Rooms</h2>
+  <% end %>
+  <% @rooms.each do |room| %>
+  <div class="bordered row margined" >
+    <div class="col-md-3 justified">
+    <%= link_to edit_room_path(room) do %>
+      <h3><%= room.name %></h3>
+    <% end %>
+
+    </div>
+    <div class="col-md-9 justified">
+      <div class="col-md-6">
+        <p>Address: <strong><%= room.address %></strong></p>
+        <p>Accomodate: <strong><%= room.accomodate %></strong></p>
+        <p>Home Type: <strong><%= room.home_type %></strong></p>
+        <p>Room Type: <strong><%= room.room_type %></strong></p>
+      </div>
+      <div class="col-md-6">
+        <%= cl_image_tag room.photos.first.path, width: 200, height: 200, crop: :fill %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+

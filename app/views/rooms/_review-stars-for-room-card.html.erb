@@ -1,0 +1,11 @@
+<%= link_to room_path(room.id, anchor:  "reviews"), id:"reviews-average" do %>
+  <ul class="list-inline">
+    <% room.reviews.average(:star).to_i.round.times do %>
+    <li class="fa fa-star star star-active"></li>
+    <% end %>
+    <% (5 - room.reviews.average(:star).to_i.round).times do %>
+    <li class="fa fa-star star"></li>
+    <% end %>
+    <li><p class="review-count">(<%= room.reviews.count %>) Reviews</p></li>
+  </ul>
+<% end %>
